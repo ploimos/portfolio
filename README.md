@@ -24,6 +24,10 @@
 
 ### 1. 📊 **Dashboard Business Intelligence**  
 ```bash
-📂 /projects/powerbi-dashboard  
+📂 /projects/powerbi  
 🛠️ Power BI, SQL, Azure  
 📌 Stato: In sviluppo 
+
+- **Tecnologie**: Power BI, SQL, Azure
+- **Descrizione**: Analisi di dataset finanziari con visualizzazioni interattive.
+- [Vedi codice](/projects/powerbi.html)

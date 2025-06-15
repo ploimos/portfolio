@@ -1,2 +1,22 @@
 body { font-family: Arial; margin: 20px; }
 h1 { color: #003366; } /* Blu oltremare */
+
+/* assets/css/style.css */
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.project-card {
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
