@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <!-- Stile Forty -->
+  <link rel="stylesheet" href="assets/css/forty/main.css">
+  <noscript><link rel="stylesheet" href="assets/css/forty/noscript.css"></noscript>
+  <!-- Stile personalizzato -->
+  <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
-<!--#include virtual="/includes/header.html" -->
-  <section class="hero">
-    <div class="container">
-      <h1>Benvenuto nel mio portfolio</h1>
-      <p>Qui di seguito presenterò dei progetti in Power BI, SQL e Machine Learning</p>
+  <!--#include virtual="includes/header.html" -->
+  
+  <!-- Sezione Hero (adattata da Forty) -->
+  <section id="banner" class="major">
+    <div class="inner">
+      <header class="major">
+        <h1>Ciao, sono Marco Plomitallo</h1>
+      </header>
+      <div class="content">
+        <p>Laureando in Ingegneria Informatica</p>
+      </div>
     </div>
   </section>
 
-  <section id="projects" class="project-grid">
-    <div class="project-card">
-      <h2>📊 Dashboard BI</h2>
-      <p>Visualizzazioni interattive di dati finanziari</p>
-      <a href="/projects/powerbi.html" class="btn">Vedi progetto</a>
-      <a href="/about_me.html" class="btn">Chi sono</a>
-    </div>
-    <!-- Aggiungi altri progetti qui -->
+  <!-- Griglia Progetti (classe tiles Forty) -->
+  <section id="two" class="tiles">
+    <article>
+      <span class="image">
+        <img src="images/project1.jpg" alt="">
+      </span>
+      <header class="major">
+        <h3><a href="#" class="link">Dashboard Power BI</a></h3>
+        <p>Analisi dati finanziari</p>
+      </header>
+    </article>
   </section>
-<!--#include virtual="/includes/footer.html" -->
+
+  <!-- Script Forty -->
+  <script src="assets/js/forty/util.js"></script>
+  <script src="assets/js/forty/main.js"></script>
+  <!-- Miei script -->
+  <script src="assets/js/custom.js"></script>
 </body>
 </html>
