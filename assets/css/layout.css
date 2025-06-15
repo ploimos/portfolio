@@ -1,0 +1,31 @@
+/* Layout base */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-header {
+  background: #003366; /* Blu Fincons */
+  color: white;
+  padding: 1rem 0;
+}
+
+.site-header nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-footer {
+  background: #f5f5f5;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* Hero section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.7), url('/assets/img/hero-bg.jpg');
+  color: white;
+  padding: 4rem 0;
+  text-align: center;
+}
