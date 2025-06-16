@@ -7,5 +7,6 @@ async function loadComponent(path, targetId) {
 // Carica header e footer
 document.addEventListener('DOMContentLoaded', () => {
   loadComponent('includes/header.html', 'header');
-  //loadComponent('includes/footer.html', 'footer');
+  loadComponent('includes/footer.html', 'footer');
+  loadComponent('includes/menu.html', 'menu');
 });
