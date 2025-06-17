@@ -472,3 +472,791 @@ S                 2802    148        5.28
 W               192688   5155        2.68
 2025-06-16 21:42:06,853 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
 2025-06-16 21:42:06,854 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 05:16:13,320 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 05:16:13,320 - INFO - Caricamento dati in corso...
+2025-06-17 05:16:17,114 - INFO - 
+=== STATISTICHE ===
+2025-06-17 05:16:17,114 - INFO - Transazioni totali: 242283
+2025-06-17 05:16:17,115 - INFO - Frodi totali: 8565
+2025-06-17 05:16:17,115 - INFO - % Frodi: 3.54
+2025-06-17 05:16:17,115 - INFO - Min importo: 100.0
+2025-06-17 05:16:17,115 - INFO - Max importo: 31937.391
+2025-06-17 05:16:17,115 - INFO - Prima data: 2024-07-02 00:03:11
+2025-06-17 05:16:17,115 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 05:16:17,116 - INFO - 
+Distribuzione per categoria prodotto:
+2025-06-17 05:16:17,118 - INFO -            Transazioni  Frodi  Perc_Frodi
+ProductCD                                
+C                 4969    812       16.34
+H                 9999   1097       10.97
+R                31825   1353        4.25
+S                 2802    148        5.28
+W               192688   5155        2.68
+2025-06-17 05:16:17,119 - INFO - 
+Distribuzione per tipo carta:
+2025-06-17 05:16:17,119 - INFO -             Transazioni  Frodi
+tipo_carta                    
+Unknown          242283   8565
+2025-06-17 05:16:18,021 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 05:16:18,021 - INFO - 
+Anteprima dati salvati:
+2025-06-17 05:16:18,042 - INFO -     isFraud ProductCD  TransactionAmt provenienza email_provider     TransactionDate tipo_carta brand_carta
+6         0         W           159.0  126.0_87.0        unknown 2024-07-02 00:03:11    Unknown        Visa
+7         0         W           422.5  325.0_87.0        unknown 2024-07-02 00:03:18    Unknown        Visa
+9         0         W           117.0  204.0_87.0        unknown 2024-07-02 00:03:25    Unknown  Mastercard
+17        0         H           100.0  204.0_87.0        unknown 2024-07-02 00:05:37    Unknown  Mastercard
+19        0         W           186.0  264.0_87.0        unknown 2024-07-02 00:06:39    Unknown        Visa
+2025-06-17 05:16:18,043 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 06:05:58,855 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 06:05:58,856 - INFO - Caricamento dati in corso...
+2025-06-17 06:06:02,609 - INFO - 
+=== STATISTICHE ===
+2025-06-17 06:06:02,609 - INFO - Transazioni totali: 242283
+2025-06-17 06:06:02,610 - INFO - Frodi totali: 8565
+2025-06-17 06:06:02,610 - INFO - % Frodi: 3.54
+2025-06-17 06:06:02,610 - INFO - Min importo: 100.0
+2025-06-17 06:06:02,610 - INFO - Max importo: 31937.391
+2025-06-17 06:06:02,610 - INFO - Prima data: 2024-07-02 00:03:11
+2025-06-17 06:06:02,610 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 06:06:02,610 - INFO - 
+Distribuzione per provenienza:
+2025-06-17 06:06:02,612 - INFO -              Transazioni  Frodi
+provenienza                    
+Altro             242283   8565
+2025-06-17 06:06:02,613 - INFO - 
+Distribuzione per provider email:
+2025-06-17 06:06:02,613 - INFO -                 Transazioni  Frodi
+email_provider                    
+other                242283   8565
+2025-06-17 06:06:03,485 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 06:06:03,486 - INFO - 
+Anteprima dati salvati:
+2025-06-17 06:06:03,506 - INFO -     isFraud ProductCD  TransactionAmt provenienza email_provider     TransactionDate tipo_carta brand_carta
+6         0         W           159.0       Altro          other 2024-07-02 00:03:11    Unknown        Visa
+7         0         W           422.5       Altro          other 2024-07-02 00:03:18    Unknown        Visa
+9         0         W           117.0       Altro          other 2024-07-02 00:03:25    Unknown  Mastercard
+17        0         H           100.0       Altro          other 2024-07-02 00:05:37    Unknown  Mastercard
+19        0         W           186.0       Altro          other 2024-07-02 00:06:39    Unknown        Visa
+2025-06-17 06:06:03,507 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 06:24:28,368 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 06:24:28,369 - INFO - Caricamento dati in corso...
+2025-06-17 06:24:46,340 - INFO - 
+=== STATISTICHE ===
+2025-06-17 06:24:46,341 - INFO - Transazioni totali: 242283
+2025-06-17 06:24:46,341 - INFO - Frodi totali: 8565
+2025-06-17 06:24:46,341 - INFO - % Frodi: 3.54
+2025-06-17 06:24:46,341 - INFO - Min importo: 100.0
+2025-06-17 06:24:46,341 - INFO - Max importo: 31937.391
+2025-06-17 06:24:46,341 - INFO - Prima data: 2024-07-02 00:03:11
+2025-06-17 06:24:46,341 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 06:24:46,342 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 06:24:46,344 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                 97341   3419        3.51
+India                 59579   2162        3.63
+United States         36642   1301        3.55
+Indonesia              7477    232        3.10
+Brazil                 7342    261        3.55
+Japan                  6726    231        3.43
+Russia                 4489    160        3.56
+Germany                3855    136        3.53
+Mexico                 3558    117        3.29
+United Kingdom         2611     94        3.60
+2025-06-17 06:24:46,344 - INFO - 
+Distribuzione provider email:
+2025-06-17 06:24:46,345 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                 87030   3054        3.51
+icloud                51062   1827        3.58
+other                 50699   1765        3.48
+outlook               32952   1165        3.54
+yahoo                 20540    754        3.67
+2025-06-17 06:24:46,345 - INFO - 
+Distribuzione tipo carta:
+2025-06-17 06:24:46,346 - INFO -             Transazioni  Frodi  Perc_Frodi
+tipo_carta                                
+Debit            140728   4970        3.53
+Credit            90042   3179        3.53
+Prepaid           11513    416        3.61
+2025-06-17 06:24:47,233 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 06:24:47,234 - INFO - 
+Anteprima dati salvati:
+2025-06-17 06:24:47,261 - INFO -     isFraud  TransactionAmt ProductCD provenienza email_provider     TransactionDate tipo_carta brand_carta
+6         0           159.0         H       China          gmail 2024-07-02 00:03:11      Debit        Visa
+7         0           422.5         H       China        outlook 2024-07-02 00:03:18    Prepaid        Visa
+9         0           117.0         C       Japan         icloud 2024-07-02 00:03:25      Debit        Visa
+17        0           100.0         R     Germany          yahoo 2024-07-02 00:05:37     Credit        Visa
+19        0           186.0         H   Indonesia          other 2024-07-02 00:06:39      Debit        Visa
+2025-06-17 06:24:47,261 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 06:32:03,951 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 06:32:03,951 - INFO - Caricamento dati in corso...
+2025-06-17 06:32:23,524 - INFO - 
+=== STATISTICHE ===
+2025-06-17 06:32:23,524 - INFO - Transazioni totali: 242283
+2025-06-17 06:32:23,524 - INFO - Frodi totali: 8565
+2025-06-17 06:32:23,524 - INFO - % Frodi: 3.54
+2025-06-17 06:32:23,524 - INFO - Min importo: 100.0
+2025-06-17 06:32:23,525 - INFO - Max importo: 31937.391
+2025-06-17 06:32:23,525 - INFO - Prima data: 2024-07-02 00:03:11
+2025-06-17 06:32:23,525 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 06:32:23,525 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 06:32:23,528 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                 97552   3510        3.60
+India                 59748   2120        3.55
+United States         36076   1207        3.35
+Brazil                 7398    249        3.37
+Indonesia              7345    265        3.61
+Japan                  6918    235        3.40
+Russia                 4462    137        3.07
+Germany                3977    151        3.80
+Mexico                 3590    139        3.87
+United Kingdom         2519     89        3.53
+2025-06-17 06:32:23,528 - INFO - 
+Distribuzione provider email:
+2025-06-17 06:32:23,529 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                 87017   3124        3.59
+icloud                50902   1803        3.54
+other                 50877   1791        3.52
+outlook               32744   1152        3.52
+yahoo                 20743    695        3.35
+2025-06-17 06:32:23,529 - INFO - 
+Distribuzione carte di pagamento:
+2025-06-17 06:32:23,530 - INFO -                              Transazioni  Frodi
+tipo_carta brand_carta                         
+Debit      Visa                    91264   3220
+Credit     Visa                    58594   2048
+Debit      Mastercard              43128   1429
+Credit     Mastercard              27519    863
+Prepaid    Visa                     7615    292
+Debit      American Express         3660    112
+Prepaid    Mastercard               3630    146
+Debit      Discover                 2400    219
+Credit     American Express         2351     65
+           Discover                 1552    129
+Prepaid    American Express          309     15
+           Discover                  248     24
+Credit     Amex                       13      3
+2025-06-17 06:32:24,459 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 06:32:24,459 - INFO - 
+Anteprima dati salvati:
+2025-06-17 06:32:24,489 - INFO -     isFraud  TransactionAmt ProductCD    provenienza email_provider     TransactionDate tipo_carta brand_carta
+6         0           159.0         W  United States          gmail 2024-07-02 00:03:11     Credit        Visa
+7         0           422.5         W  United States         icloud 2024-07-02 00:03:18      Debit        Visa
+9         0           117.0         W  United States        outlook 2024-07-02 00:03:25      Debit  Mastercard
+17        0           100.0         C          India          gmail 2024-07-02 00:05:37     Credit  Mastercard
+19        0           186.0         H          China        outlook 2024-07-02 00:06:39     Credit        Visa
+2025-06-17 06:32:24,489 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 11:47:43,346 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 11:47:43,346 - INFO - Caricamento dati in corso...
+2025-06-17 11:47:48,269 - INFO - 
+=== STATISTICHE ===
+2025-06-17 11:47:48,270 - INFO - Transazioni totali: 24324
+2025-06-17 11:47:48,270 - INFO - Frodi totali: 1149
+2025-06-17 11:47:48,270 - INFO - % Frodi: 4.72
+2025-06-17 11:47:48,270 - INFO - Min importo: 500.0
+2025-06-17 11:47:48,270 - INFO - Max importo: 31937.391
+2025-06-17 11:47:48,270 - INFO - Prima data: 2024-07-02 00:20:46
+2025-06-17 11:47:48,270 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 11:47:48,271 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 11:47:48,273 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                  9681    461        4.76
+India                  6096    288        4.72
+United States          3633    178        4.90
+Indonesia               755     37        4.90
+Brazil                  720     23        3.19
+Japan                   710     43        6.06
+Russia                  439     18        4.10
+Germany                 358     14        3.91
+Mexico                  346     14        4.05
+United Kingdom          268     11        4.10
+2025-06-17 11:47:48,273 - INFO - 
+Distribuzione provider email:
+2025-06-17 11:47:48,274 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                  8818    401        4.55
+other                  5185    262        5.05
+icloud                 5120    254        4.96
+outlook                3270    147        4.50
+yahoo                  1931     85        4.40
+2025-06-17 11:47:48,274 - INFO - 
+Distribuzione carte di pagamento:
+2025-06-17 11:47:48,275 - INFO -                              Transazioni  Frodi
+tipo_carta brand_carta                         
+Debit      Visa                     8967    429
+Credit     Visa                     5478    290
+Debit      Mastercard               4451    157
+Credit     Mastercard               2839    100
+Prepaid    Visa                      779     44
+Debit      Discover                  539     66
+Prepaid    Mastercard                367     12
+Credit     Discover                  358     44
+Debit      American Express          310      2
+Credit     American Express          185      1
+Prepaid    Discover                   37      4
+           American Express           13      0
+Credit     Amex                        1      0
+2025-06-17 11:47:48,373 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 11:47:48,373 - INFO - 
+Anteprima dati salvati:
+2025-06-17 11:47:48,377 - INFO -     isFraud  TransactionAmt ProductCD provenienza email_provider     TransactionDate tipo_carta brand_carta
+41        0           774.0         R       China          other 2024-07-02 00:20:46     Credit        Visa
+56        0           500.0         R       China          other 2024-07-02 00:24:26      Debit        Visa
+60        0          2454.0         C       China        outlook 2024-07-02 00:26:47      Debit  Mastercard
+73        0           554.0         W       China          other 2024-07-02 00:29:45      Debit        Visa
+94        0           527.0         C       India          other 2024-07-02 00:35:33      Debit        Visa
+2025-06-17 11:47:48,377 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 11:48:11,016 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 11:48:11,016 - INFO - Caricamento dati in corso...
+2025-06-17 11:48:18,677 - INFO - 
+=== STATISTICHE ===
+2025-06-17 11:48:18,677 - INFO - Transazioni totali: 66360
+2025-06-17 11:48:18,677 - INFO - Frodi totali: 3367
+2025-06-17 11:48:18,678 - INFO - % Frodi: 5.07
+2025-06-17 11:48:18,678 - INFO - Min importo: 250.0
+2025-06-17 11:48:18,678 - INFO - Max importo: 31937.391
+2025-06-17 11:48:18,678 - INFO - Prima data: 2024-07-02 00:03:18
+2025-06-17 11:48:18,678 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 11:48:18,678 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 11:48:18,680 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                 26689   1329        4.98
+India                 16322    824        5.05
+United States          9966    514        5.16
+Brazil                 2020    110        5.45
+Indonesia              2007    115        5.73
+Japan                  1945     83        4.27
+Russia                 1166     65        5.57
+Germany                1034     53        5.13
+Mexico                 1011     49        4.85
+United Kingdom          700     43        6.14
+2025-06-17 11:48:18,681 - INFO - 
+Distribuzione provider email:
+2025-06-17 11:48:18,681 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                 24010   1218        5.07
+other                 13926    695        4.99
+icloud                13920    723        5.19
+outlook                8981    472        5.26
+yahoo                  5523    259        4.69
+2025-06-17 11:48:18,682 - INFO - 
+Distribuzione carte di pagamento:
+2025-06-17 11:48:18,683 - INFO -                              Transazioni  Frodi
+tipo_carta brand_carta                         
+Debit      Visa                    24212   1246
+Credit     Visa                    15622    740
+Debit      Mastercard              12048    552
+Credit     Mastercard               7727    380
+Prepaid    Visa                     2000    103
+Debit      Discover                 1089    141
+           American Express         1036     38
+Prepaid    Mastercard               1019     38
+Credit     Discover                  735     90
+           American Express          660     22
+Prepaid    American Express          104      3
+           Discover                  100     14
+Credit     Amex                        8      0
+2025-06-17 11:48:18,924 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 11:48:18,925 - INFO - 
+Anteprima dati salvati:
+2025-06-17 11:48:18,933 - INFO -     isFraud  TransactionAmt ProductCD    provenienza email_provider     TransactionDate tipo_carta brand_carta
+7         0          422.50         W          India          other 2024-07-02 00:03:18     Credit        Visa
+31        0          363.89         R          China          gmail 2024-07-02 00:11:07     Credit        Visa
+41        0          774.00         W  United States          gmail 2024-07-02 00:14:49     Credit        Visa
+56        0          500.00         W          Italy         icloud 2024-07-02 00:18:29      Debit        Visa
+58        0          380.21         R          China          other 2024-07-02 00:20:01     Credit        Visa
+2025-06-17 11:48:18,934 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 11:48:27,785 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 11:48:27,785 - INFO - Caricamento dati in corso...
+2025-06-17 11:48:37,596 - INFO - 
+=== STATISTICHE ===
+2025-06-17 11:48:37,596 - INFO - Transazioni totali: 100470
+2025-06-17 11:48:37,596 - INFO - Frodi totali: 4566
+2025-06-17 11:48:37,596 - INFO - % Frodi: 4.54
+2025-06-17 11:48:37,596 - INFO - Min importo: 200.0
+2025-06-17 11:48:37,597 - INFO - Max importo: 31937.391
+2025-06-17 11:48:37,597 - INFO - Prima data: 2024-07-02 00:03:18
+2025-06-17 11:48:37,597 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 11:48:37,597 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 11:48:37,603 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                 40620   1878        4.62
+India                 24698   1150        4.66
+United States         14928    648        4.34
+Indonesia              3092    145        4.69
+Brazil                 3061    143        4.67
+Japan                  2839    126        4.44
+Russia                 1871     86        4.60
+Germany                1558     57        3.66
+Mexico                 1483     67        4.52
+United Kingdom         1110     56        5.05
+2025-06-17 11:48:37,603 - INFO - 
+Distribuzione provider email:
+2025-06-17 11:48:37,604 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                 36534   1621        4.44
+icloud                20932    990        4.73
+other                 20883    956        4.58
+outlook               13616    604        4.44
+yahoo                  8505    395        4.64
+2025-06-17 11:48:37,604 - INFO - 
+Distribuzione carte di pagamento:
+2025-06-17 11:48:37,605 - INFO -                              Transazioni  Frodi
+tipo_carta brand_carta                         
+Debit      Visa                    37472   1709
+Credit     Visa                    23698   1043
+Debit      Mastercard              17930    760
+Credit     Mastercard              11520    478
+Prepaid    Visa                     3079    125
+Debit      American Express         1686     62
+Prepaid    Mastercard               1460     56
+Debit      Discover                 1414    160
+Credit     American Express         1076     43
+           Discover                  879    111
+Prepaid    American Express          137      5
+           Discover                  116     14
+Credit     Amex                        3      0
+2025-06-17 11:48:37,974 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 11:48:37,974 - INFO - 
+Anteprima dati salvati:
+2025-06-17 11:48:37,989 - INFO -     isFraud  TransactionAmt ProductCD provenienza email_provider     TransactionDate tipo_carta brand_carta
+7         0          422.50         S       India         icloud 2024-07-02 00:03:18     Credit        Visa
+31        0          363.89         C       Japan          yahoo 2024-07-02 00:11:07     Credit        Visa
+32        0          200.00         R       China          other 2024-07-02 00:11:17      Debit        Visa
+41        0          774.00         C   Indonesia        outlook 2024-07-02 00:14:49      Debit        Visa
+51        0          226.00         R       China         icloud 2024-07-02 00:16:37     Credit        Visa
+2025-06-17 11:48:37,990 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 11:48:47,910 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 11:48:47,910 - INFO - Caricamento dati in corso...
+2025-06-17 11:48:59,954 - INFO - 
+=== STATISTICHE ===
+2025-06-17 11:48:59,954 - INFO - Transazioni totali: 133609
+2025-06-17 11:48:59,954 - INFO - Frodi totali: 5956
+2025-06-17 11:48:59,954 - INFO - % Frodi: 4.46
+2025-06-17 11:48:59,954 - INFO - Min importo: 150.0
+2025-06-17 11:48:59,954 - INFO - Max importo: 31937.391
+2025-06-17 11:48:59,955 - INFO - Prima data: 2024-07-02 00:03:11
+2025-06-17 11:48:59,955 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 11:48:59,955 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 11:48:59,957 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                 53558   2314        4.32
+India                 32729   1471        4.49
+United States         20204    917        4.54
+Brazil                 4240    190        4.48
+Indonesia              4099    182        4.44
+Japan                  3700    161        4.35
+Russia                 2464    119        4.83
+Germany                2148     97        4.52
+Mexico                 2017     89        4.41
+United Kingdom         1482     75        5.06
+2025-06-17 11:48:59,957 - INFO - 
+Distribuzione provider email:
+2025-06-17 11:48:59,958 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                 47978   2140        4.46
+icloud                28276   1308        4.63
+other                 28021   1218        4.35
+outlook               18028    777        4.31
+yahoo                 11306    513        4.54
+2025-06-17 11:48:59,958 - INFO - 
+Distribuzione carte di pagamento:
+2025-06-17 11:48:59,959 - INFO -                              Transazioni  Frodi
+tipo_carta brand_carta                         
+Debit      Visa                    50056   2163
+Credit     Visa                    31636   1449
+Debit      Mastercard              23655    952
+Credit     Mastercard              15136    653
+Prepaid    Visa                     4166    180
+Debit      American Express         2356     94
+Prepaid    Mastercard               1988     85
+Debit      Discover                 1656    182
+Credit     American Express         1488     52
+           Discover                 1117    122
+Prepaid    American Express          200      3
+           Discover                  149     21
+Credit     Amex                        6      0
+2025-06-17 11:49:00,453 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 11:49:00,454 - INFO - 
+Anteprima dati salvati:
+2025-06-17 11:49:00,473 - INFO -     isFraud  TransactionAmt ProductCD provenienza email_provider     TransactionDate tipo_carta brand_carta
+6         0          159.00         C   Indonesia         icloud 2024-07-02 00:03:11      Debit        Visa
+7         0          422.50         C       India          yahoo 2024-07-02 00:03:18      Debit        Visa
+19        0          186.00         C       Japan         icloud 2024-07-02 00:06:39      Debit        Visa
+21        0          159.95         R       China        outlook 2024-07-02 00:07:18     Credit  Mastercard
+26        0          184.00         H       China         icloud 2024-07-02 00:10:14      Debit        Visa
+2025-06-17 11:49:00,473 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 11:49:10,972 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 11:49:10,972 - INFO - Caricamento dati in corso...
+2025-06-17 11:49:23,947 - INFO - 
+=== STATISTICHE ===
+2025-06-17 11:49:23,948 - INFO - Transazioni totali: 149080
+2025-06-17 11:49:23,948 - INFO - Frodi totali: 6560
+2025-06-17 11:49:23,948 - INFO - % Frodi: 4.4
+2025-06-17 11:49:23,948 - INFO - Min importo: 120.0
+2025-06-17 11:49:23,948 - INFO - Max importo: 31937.391
+2025-06-17 11:49:23,948 - INFO - Prima data: 2024-07-02 00:03:11
+2025-06-17 11:49:23,948 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 11:49:23,949 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 11:49:23,951 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                 59568   2622        4.40
+India                 36737   1624        4.42
+United States         22342    989        4.43
+Indonesia              4686    216        4.61
+Brazil                 4649    189        4.07
+Japan                  4249    189        4.45
+Russia                 2800    122        4.36
+Germany                2370    110        4.64
+Mexico                 2207    100        4.53
+United Kingdom         1631     75        4.60
+2025-06-17 11:49:23,951 - INFO - 
+Distribuzione provider email:
+2025-06-17 11:49:23,952 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                 53691   2293        4.27
+icloud                31244   1396        4.47
+other                 31193   1377        4.41
+outlook               20249    893        4.41
+yahoo                 12703    601        4.73
+2025-06-17 11:49:23,952 - INFO - 
+Distribuzione carte di pagamento:
+2025-06-17 11:49:23,953 - INFO -                              Transazioni  Frodi
+tipo_carta brand_carta                         
+Debit      Visa                    55813   2362
+Credit     Visa                    35333   1581
+Debit      Mastercard              26738   1115
+Credit     Mastercard              16893    699
+Prepaid    Visa                     4691    227
+Debit      American Express         2515     88
+Prepaid    Mastercard               2202     93
+Debit      Discover                 1821    200
+Credit     American Express         1612     49
+           Discover                 1125    119
+Prepaid    American Express          193     13
+           Discover                  136     13
+Credit     Amex                        8      1
+2025-06-17 11:49:24,503 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 11:49:24,503 - INFO - 
+Anteprima dati salvati:
+2025-06-17 11:49:24,521 - INFO -     isFraud  TransactionAmt ProductCD provenienza email_provider     TransactionDate tipo_carta brand_carta
+6         0          159.00         R       China          other 2024-07-02 00:03:11     Credit        Visa
+7         0          422.50         R       China         icloud 2024-07-02 00:03:18      Debit        Visa
+19        0          186.00         S       China          other 2024-07-02 00:06:39      Debit        Visa
+21        0          159.95         C      Brazil          gmail 2024-07-02 00:07:18      Debit  Mastercard
+26        0          184.00         W       China         icloud 2024-07-02 00:10:14     Credit        Visa
+2025-06-17 11:49:24,521 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 11:49:31,338 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 11:49:31,338 - INFO - Caricamento dati in corso...
+2025-06-17 11:49:50,295 - INFO - 
+=== STATISTICHE ===
+2025-06-17 11:49:50,295 - INFO - Transazioni totali: 242283
+2025-06-17 11:49:50,296 - INFO - Frodi totali: 8565
+2025-06-17 11:49:50,296 - INFO - % Frodi: 3.54
+2025-06-17 11:49:50,296 - INFO - Min importo: 100.0
+2025-06-17 11:49:50,296 - INFO - Max importo: 31937.391
+2025-06-17 11:49:50,296 - INFO - Prima data: 2024-07-02 00:03:11
+2025-06-17 11:49:50,296 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 11:49:50,296 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 11:49:50,298 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                 97603   3415        3.50
+India                 59698   2139        3.58
+United States         35974   1282        3.56
+Indonesia              7665    262        3.42
+Brazil                 7407    275        3.71
+Japan                  6864    240        3.50
+Russia                 4366    157        3.60
+Germany                3928    126        3.21
+Mexico                 3659    139        3.80
+United Kingdom         2530     89        3.52
+2025-06-17 11:49:50,299 - INFO - 
+Distribuzione provider email:
+2025-06-17 11:49:50,300 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                 87535   3165        3.62
+icloud                50976   1736        3.41
+other                 50327   1746        3.47
+outlook               32910   1195        3.63
+yahoo                 20535    723        3.52
+2025-06-17 11:49:50,300 - INFO - 
+Distribuzione carte di pagamento:
+2025-06-17 11:49:50,301 - INFO -                              Transazioni  Frodi
+tipo_carta brand_carta                         
+Debit      Visa                    91844   3234
+Credit     Visa                    57937   2056
+Debit      Mastercard              43056   1418
+Credit     Mastercard              27637    905
+Prepaid    Visa                     7682    273
+Debit      American Express         3736    106
+Prepaid    Mastercard               3593    115
+Debit      Discover                 2446    217
+Credit     American Express         2278     76
+           Discover                 1557    138
+Prepaid    American Express          306     10
+           Discover                  197     17
+Credit     Amex                       14      0
+2025-06-17 11:49:51,177 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 11:49:51,177 - INFO - 
+Anteprima dati salvati:
+2025-06-17 11:49:51,203 - INFO -     isFraud  TransactionAmt ProductCD    provenienza email_provider     TransactionDate tipo_carta brand_carta
+6         0           159.0         W          India        outlook 2024-07-02 00:03:11      Debit        Visa
+7         0           422.5         W          China          other 2024-07-02 00:03:18     Credit        Visa
+9         0           117.0         R          China          gmail 2024-07-02 00:03:25      Debit  Mastercard
+17        0           100.0         C          India          gmail 2024-07-02 00:05:37      Debit  Mastercard
+19        0           186.0         H  United States        outlook 2024-07-02 00:06:39     Credit        Visa
+2025-06-17 11:49:51,203 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 11:49:59,612 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 11:49:59,612 - INFO - Caricamento dati in corso...
+2025-06-17 11:50:14,734 - INFO - 
+=== STATISTICHE ===
+2025-06-17 11:50:14,735 - INFO - Transazioni totali: 183082
+2025-06-17 11:50:14,735 - INFO - Frodi totali: 7468
+2025-06-17 11:50:14,735 - INFO - % Frodi: 4.08
+2025-06-17 11:50:14,735 - INFO - Min importo: 110.0
+2025-06-17 11:50:14,735 - INFO - Max importo: 31937.391
+2025-06-17 11:50:14,735 - INFO - Prima data: 2024-07-02 00:03:11
+2025-06-17 11:50:14,735 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 11:50:14,735 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 11:50:14,737 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                 73841   3038        4.11
+India                 45364   1887        4.16
+United States         27241   1076        3.95
+Indonesia              5589    200        3.58
+Brazil                 5576    239        4.29
+Japan                  5181    222        4.28
+Russia                 3247    133        4.10
+Germany                2976    109        3.66
+Mexico                 2648    108        4.08
+United Kingdom         1994     75        3.76
+2025-06-17 11:50:14,738 - INFO - 
+Distribuzione provider email:
+2025-06-17 11:50:14,739 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                 66101   2603        3.94
+icloud                38538   1550        4.02
+other                 38282   1600        4.18
+outlook               24620   1051        4.27
+yahoo                 15541    664        4.27
+2025-06-17 11:50:14,739 - INFO - 
+Distribuzione carte di pagamento:
+2025-06-17 11:50:14,740 - INFO -                              Transazioni  Frodi
+tipo_carta brand_carta                         
+Debit      Visa                    68733   2786
+Credit     Visa                    43997   1763
+Debit      Mastercard              33060   1281
+Credit     Mastercard              21046    809
+Prepaid    Visa                     5663    231
+           Mastercard               2806     98
+Debit      American Express         2504     92
+           Discover                 2001    197
+Credit     American Express         1620     52
+           Discover                 1267    129
+Prepaid    American Express          198      6
+           Discover                  178     22
+Credit     Amex                        9      2
+2025-06-17 11:50:15,413 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 11:50:15,413 - INFO - 
+Anteprima dati salvati:
+2025-06-17 11:50:15,444 - INFO -     isFraud  TransactionAmt ProductCD    provenienza email_provider     TransactionDate tipo_carta brand_carta
+6         0          159.00         H          China         icloud 2024-07-02 00:03:11     Credit        Visa
+7         0          422.50         W  United States          yahoo 2024-07-02 00:03:18     Credit        Visa
+9         0          117.00         R          China          other 2024-07-02 00:03:25      Debit  Mastercard
+19        0          186.00         W          China          gmail 2024-07-02 00:06:39      Debit        Visa
+21        0          159.95         S          China          other 2024-07-02 00:07:18      Debit  Mastercard
+2025-06-17 11:50:15,445 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 11:50:24,374 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 11:50:24,374 - INFO - Caricamento dati in corso...
+2025-06-17 11:50:39,298 - INFO - 
+=== STATISTICHE ===
+2025-06-17 11:50:39,299 - INFO - Transazioni totali: 179571
+2025-06-17 11:50:39,299 - INFO - Frodi totali: 7360
+2025-06-17 11:50:39,299 - INFO - % Frodi: 4.1
+2025-06-17 11:50:39,299 - INFO - Min importo: 115.0
+2025-06-17 11:50:39,299 - INFO - Max importo: 31937.391
+2025-06-17 11:50:39,299 - INFO - Prima data: 2024-07-02 00:03:11
+2025-06-17 11:50:39,299 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 11:50:39,299 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 11:50:39,301 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                 71894   2986        4.15
+India                 44119   1749        3.96
+United States         27209   1119        4.11
+Indonesia              5554    243        4.38
+Brazil                 5467    220        4.02
+Japan                  5027    219        4.36
+Russia                 3346    138        4.12
+Germany                2996    115        3.84
+Mexico                 2640     93        3.52
+United Kingdom         1937     98        5.06
+2025-06-17 11:50:39,302 - INFO - 
+Distribuzione provider email:
+2025-06-17 11:50:39,303 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                 64757   2653        4.10
+other                 37597   1509        4.01
+icloud                37429   1521        4.06
+outlook               24557   1045        4.26
+yahoo                 15231    632        4.15
+2025-06-17 11:50:39,303 - INFO - 
+Distribuzione carte di pagamento:
+2025-06-17 11:50:39,304 - INFO -                              Transazioni  Frodi
+tipo_carta brand_carta                         
+Debit      Visa                    67635   2772
+Credit     Visa                    42987   1717
+Debit      Mastercard              32366   1243
+Credit     Mastercard              20514    813
+Prepaid    Visa                     5616    225
+           Mastercard               2704     92
+Debit      American Express         2471     88
+           Discover                 2059    223
+Credit     American Express         1634     52
+           Discover                 1203    110
+Prepaid    American Express          216     10
+           Discover                  155     15
+Credit     Amex                       11      0
+2025-06-17 11:50:39,953 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 11:50:39,953 - INFO - 
+Anteprima dati salvati:
+2025-06-17 11:50:39,979 - INFO -     isFraud  TransactionAmt ProductCD    provenienza email_provider     TransactionDate tipo_carta brand_carta
+6         0          159.00         R          China        outlook 2024-07-02 00:03:11      Debit        Visa
+7         0          422.50         C          China          other 2024-07-02 00:03:18      Debit        Visa
+9         0          117.00         W        Germany         icloud 2024-07-02 00:03:25     Credit  Mastercard
+19        0          186.00         W  United States         icloud 2024-07-02 00:06:39     Credit        Visa
+21        0          159.95         W  United States          gmail 2024-07-02 00:07:18      Debit  Mastercard
+2025-06-17 11:50:39,979 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 11:51:08,749 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 11:51:08,749 - INFO - Caricamento dati in corso...
+2025-06-17 11:51:27,937 - INFO - 
+=== STATISTICHE ===
+2025-06-17 11:51:27,937 - INFO - Transazioni totali: 242283
+2025-06-17 11:51:27,937 - INFO - Frodi totali: 8565
+2025-06-17 11:51:27,937 - INFO - % Frodi: 3.54
+2025-06-17 11:51:27,937 - INFO - Min importo: 100.0
+2025-06-17 11:51:27,937 - INFO - Max importo: 31937.391
+2025-06-17 11:51:27,938 - INFO - Prima data: 2024-07-02 00:03:11
+2025-06-17 11:51:27,938 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 11:51:27,938 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 11:51:27,940 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                 97660   3424        3.51
+India                 59802   2167        3.62
+United States         36174   1283        3.55
+Indonesia              7446    259        3.48
+Brazil                 7419    246        3.32
+Japan                  6789    244        3.59
+Russia                 4250    140        3.29
+Germany                3909    122        3.12
+Mexico                 3629    130        3.58
+United Kingdom         2579     86        3.33
+2025-06-17 11:51:27,940 - INFO - 
+Distribuzione provider email:
+2025-06-17 11:51:27,941 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                 86978   3080        3.54
+icloud                51075   1755        3.44
+other                 50943   1857        3.65
+outlook               32673   1104        3.38
+yahoo                 20614    769        3.73
+2025-06-17 11:51:27,941 - INFO - 
+Distribuzione carte di pagamento:
+2025-06-17 11:51:27,942 - INFO -                              Transazioni  Frodi
+tipo_carta brand_carta                         
+Debit      Visa                    91540   3235
+Credit     Visa                    58230   2055
+Debit      Mastercard              43142   1395
+Credit     Mastercard              27565    926
+Prepaid    Visa                     7687    270
+Debit      American Express         3711    116
+Prepaid    Mastercard               3578    120
+Debit      Discover                 2450    230
+Credit     American Express         2310     68
+           Discover                 1562    126
+Prepaid    American Express          299      8
+           Discover                  188     16
+Credit     Amex                       21      0
+2025-06-17 11:51:28,820 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 11:51:28,820 - INFO - 
+Anteprima dati salvati:
+2025-06-17 11:51:28,845 - INFO -     isFraud  TransactionAmt ProductCD provenienza email_provider     TransactionDate tipo_carta brand_carta
+6         0           159.0         R       China          gmail 2024-07-02 00:03:11      Debit        Visa
+7         0           422.5         H   Indonesia          other 2024-07-02 00:03:18      Debit        Visa
+9         0           117.0         C       India          gmail 2024-07-02 00:03:25      Debit  Mastercard
+17        0           100.0         S       China          other 2024-07-02 00:05:37      Debit  Mastercard
+19        0           186.0         C     Germany        outlook 2024-07-02 00:06:39      Debit        Visa
+2025-06-17 11:51:28,846 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
+2025-06-17 11:51:48,762 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-17 11:51:48,762 - INFO - Caricamento dati in corso...
+2025-06-17 11:52:01,737 - INFO - 
+=== STATISTICHE ===
+2025-06-17 11:52:01,738 - INFO - Transazioni totali: 149080
+2025-06-17 11:52:01,738 - INFO - Frodi totali: 6560
+2025-06-17 11:52:01,738 - INFO - % Frodi: 4.4
+2025-06-17 11:52:01,738 - INFO - Min importo: 120.0
+2025-06-17 11:52:01,738 - INFO - Max importo: 31937.391
+2025-06-17 11:52:01,738 - INFO - Prima data: 2024-07-02 00:03:11
+2025-06-17 11:52:01,738 - INFO - Ultima data: 2024-12-31 00:00:00
+2025-06-17 11:52:01,738 - INFO - 
+Top 10 paesi per transazioni:
+2025-06-17 11:52:01,740 - INFO -                 Transazioni  Frodi  Perc_Frodi
+provenienza                                   
+China                 59922   2658        4.44
+India                 36787   1588        4.32
+United States         22213   1006        4.53
+Indonesia              4685    212        4.53
+Brazil                 4627    206        4.45
+Japan                  4298    208        4.84
+Russia                 2692    105        3.90
+Germany                2366    116        4.90
+Mexico                 2267     80        3.53
+United Kingdom         1652     60        3.63
+2025-06-17 11:52:01,741 - INFO - 
+Distribuzione provider email:
+2025-06-17 11:52:01,742 - INFO -                 Transazioni  Frodi  Perc_Frodi
+email_provider                                
+gmail                 53109   2359        4.44
+icloud                31554   1347        4.27
+other                 31304   1387        4.43
+outlook               20585    923        4.48
+yahoo                 12528    544        4.34
+2025-06-17 11:52:01,742 - INFO - 
+Distribuzione carte di pagamento:
+2025-06-17 11:52:01,743 - INFO -                              Transazioni  Frodi
+tipo_carta brand_carta                         
+Debit      Visa                    55649   2423
+Credit     Visa                    35501   1554
+Debit      Mastercard              26661   1121
+Credit     Mastercard              16912    695
+Prepaid    Visa                     4705    195
+Debit      American Express         2480     90
+Prepaid    Mastercard               2242     90
+Debit      Discover                 1799    189
+Credit     American Express         1615     47
+           Discover                 1116    123
+Prepaid    American Express          225     13
+           Discover                  167     20
+Credit     Amex                        8      0
+2025-06-17 11:52:02,285 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-17 11:52:02,285 - INFO - 
+Anteprima dati salvati:
+2025-06-17 11:52:02,305 - INFO -     isFraud  TransactionAmt ProductCD   provenienza email_provider     TransactionDate tipo_carta brand_carta
+6         0          159.00         R         Japan          yahoo 2024-07-02 00:03:11     Credit        Visa
+7         0          422.50         W  Saudi Arabia         icloud 2024-07-02 00:03:18      Debit        Visa
+19        0          186.00         C         India          other 2024-07-02 00:06:39      Debit        Visa
+21        0          159.95         C         China          gmail 2024-07-02 00:07:18      Debit  Mastercard
+26        0          184.00         C         China          gmail 2024-07-02 00:10:14      Debit        Visa
+2025-06-17 11:52:02,306 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
