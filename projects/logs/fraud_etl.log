@@ -1,0 +1,4 @@
+2025-06-16 19:06:44,717 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 19:06:44,717 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\data\raw\train_transaction.csv
+2025-06-16 19:06:44,718 - ERROR - Errore durante l'estrazione: [Errno 2] No such file or directory: 'C:\\Users\\mplom\\Portfolio\\projects\\data\\raw\\train_transaction.csv'
+2025-06-16 19:06:44,718 - ERROR - ETL FALLITO: [Errno 2] No such file or directory: 'C:\\Users\\mplom\\Portfolio\\projects\\data\\raw\\train_transaction.csv'

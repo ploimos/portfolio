@@ -1,151 +1,147 @@
+# projects/etl/scripts/etl_final.py
+import os
 import pandas as pd
 import logging
-from datetime import datetime
-from pathlib import Path
-import shutil
+import sys
 
-# 1. Configurazione percorsi ASSOLUTI
-BASE_DIR = Path(__file__).parent.parent  # Cartella principale del progetto (etl/)
-DATA_DIR = BASE_DIR / 'data'
-RAW_DATA_DIR = DATA_DIR / 'raw'
-PROCESSED_DATA_DIR = DATA_DIR / 'processed'
-LOGS_DIR = BASE_DIR / 'logs'
+# Configurazione percorsi
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(SCRIPT_DIR)
+DATA_DIR = os.path.join(BASE_DIR, 'data')
+RAW_DIR = os.path.join(DATA_DIR, 'raw')
+PROCESSED_DIR = os.path.join(DATA_DIR, 'processed')
+LOGS_DIR = os.path.join(BASE_DIR, 'logs')
 
-# Crea tutte le cartelle necessarie
-for folder in [RAW_DATA_DIR, PROCESSED_DATA_DIR, LOGS_DIR]:
-    folder.mkdir(parents=True, exist_ok=True)
+RAW_FILE = 'train_transaction.csv'
+PROCESSED_FILE = 'powerbi_ready_data.csv'
+LOG_FILE = 'fraud_etl.log'
 
-# 2. Configurazione logging avanzata
-log_file = LOGS_DIR / 'etl.log'
+RAW_DATA_PATH = os.path.join(RAW_DIR, RAW_FILE)
+PROCESSED_DATA_PATH = os.path.join(PROCESSED_DIR, PROCESSED_FILE)
+LOG_PATH = os.path.join(LOGS_DIR, LOG_FILE)
+
+# Soglie importi
+MIN_AMOUNT = 100
+MAX_AMOUNT = 100000
+
+# Setup cartelle
+os.makedirs(RAW_DIR, exist_ok=True)
+os.makedirs(PROCESSED_DIR, exist_ok=True)
+os.makedirs(LOGS_DIR, exist_ok=True)
+
+# Configurazione logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(log_file, encoding='utf-8'),
+        logging.FileHandler(LOG_PATH),
         logging.StreamHandler()
     ]
 )
-logger = logging.getLogger()
+logger = logging.getLogger(__name__)
 
-# 3. Funzioni di supporto con gestione errori migliorata
-def filter_data(df):
-    """Filtra i dati mantenendo tutte le frodi e un campione delle normali"""
-    try:
-        fraud = df[df['isFraud'] == True]
-        normal = df[df['isFraud'] == False].sample(frac=0.05, random_state=42)
-        logger.info(f"Filtro applicato: {len(fraud)} frodi + {len(normal)} normali")
-        return pd.concat([fraud, normal])
-    except Exception as e:
-        logger.error(f"Errore nel filtro dati: {str(e)}", exc_info=True)
-        raise
+def verify_file_structure():
+    """Verifica la struttura delle cartelle"""
+    if not os.path.exists(RAW_DATA_PATH):
+        logger.error(f"File non trovato: {RAW_DATA_PATH}")
+        logger.info("""
+        Soluzioni:
+        1. Posiziona il file 'train_transaction.csv' in: data/raw/
+        2. Controlla il nome del file
+        """)
+        return False
+    return True
 
-def optimize_dtypes(df):
-    """Ottimizza i tipi di dati per ridurre la memoria"""
+def extract_data():
+    """Estrae i 3 campi obbligatori"""
     try:
-        df['TransactionAmt'] = pd.to_numeric(df['TransactionAmt'], downcast='float')
-        df['ProductCD'] = df['ProductCD'].astype('category')
-        df['isFraud'] = df['isFraud'].astype('bool')
-        logger.info("Tipi di dati ottimizzati")
-        return df
-    except Exception as e:
-        logger.error(f"Errore nell'ottimizzazione: {str(e)}", exc_info=True)
-        raise
-
-# 4. Funzioni principali ETL
-def load_data():
-    """Carica i dati dal file CSV con gestione errori rinforzata"""
-    try:
-        input_file = RAW_DATA_DIR / 'train_transaction.csv'
+        logger.info("Caricamento dati in corso...")
+        df = pd.read_csv(RAW_DATA_PATH, usecols=['isFraud', 'ProductCD', 'TransactionAmt'])
         
-        if not input_file.exists():
-            raise FileNotFoundError(f"File non trovato: {input_file}")
-        
-        logger.info(f"Caricamento dati da: {input_file}")
-        
-        # Caricamento con gestione warning migliorata
-        with pd.option_context('mode.chained_assignment', None):
-            df = pd.read_csv(
-                input_file,
-                usecols=['TransactionID', 'TransactionDT', 'TransactionAmt', 'ProductCD', 'isFraud'],
-                dtype={'isFraud': 'int8'}
-            )
+        # Verifica colonne obbligatorie
+        required_cols = {'isFraud', 'ProductCD', 'TransactionAmt'}
+        if not required_cols.issubset(df.columns):
+            missing = required_cols - set(df.columns)
+            raise ValueError(f"Colonne mancanti: {missing}")
             
-            # Conversione data esplicita
-            df['TransactionDT'] = pd.to_numeric(df['TransactionDT'], errors='coerce')
-            df['TransactionDate'] = pd.to_datetime(df['TransactionDT'], unit='s', errors='coerce')
-            df = df.drop(columns=['TransactionDT'])
-        
-        logger.info(f"Dati caricati con successo. Righe: {len(df)}")
         return df
-        
+    
     except Exception as e:
-        logger.error(f"ERRORE CRITICO nel caricamento: {str(e)}", exc_info=True)
-        logger.error(f"Percorso cercato: {input_file.absolute()}")
-        logger.error("Verifica che:")
-        logger.error("1. Il file esista nella cartella raw/")
-        logger.error("2. Il nome del file sia esatto (case-sensitive)")
-        logger.error("3. Il file non sia aperto in altri programmi")
+        logger.error(f"Errore durante il caricamento: {str(e)}")
         raise
 
-def save_to_csv(df):
-    """Salva i dati in formato CSV con validazione per Windows"""
+def filter_data(df):
+    """Applica i filtri essenziali"""
     try:
-        output_file = PROCESSED_DATA_DIR / 'powerbi_ready_data.csv'
+        # Filtro per range di importo
+        df = df[(df['TransactionAmt'] >= MIN_AMOUNT) & 
+                (df['TransactionAmt'] <= MAX_AMOUNT)].copy()
         
-        # Verifica spazio disco (versione Windows)
-        total, used, free = shutil.disk_usage(output_file.parent)
-        if df.memory_usage().sum() > free:
-            raise IOError(f"Spazio disco insufficiente. Necessari: {df.memory_usage().sum()/1e6:.2f}MB, Disponibili: {free/1e6:.2f}MB")
+        # Verifica tutte e 5 le categorie
+        valid_products = {'W', 'H', 'C', 'R', 'S'}
+        missing_products = valid_products - set(df['ProductCD'].unique())
         
-        # Salvataggio con controllo errori
-        temp_file = output_file.with_suffix('.tmp')
-        df.to_csv(
-            temp_file,
-            index=False,
-            encoding='utf-8',
-            date_format='%Y-%m-%d %H:%M:%S'
-        )
+        if missing_products:
+            logger.warning(f"Categorie prodotto mancanti: {missing_products}")
         
-        # Sostituzione atomica del file
-        if output_file.exists():
-            output_file.unlink()
-        temp_file.rename(output_file)
-        
-        logger.info(f"Dati salvati con successo in: {output_file}")
-        print(f"\n✅ File generato con successo:\n{output_file.absolute()}\n")
-        return output_file
+        return df
+    
     except Exception as e:
-        if 'temp_file' in locals() and temp_file.exists():
-            temp_file.unlink()
-        logger.error(f"Errore nel salvataggio: {str(e)}", exc_info=True)
+        logger.error(f"Errore durante il filtraggio: {str(e)}")
         raise
 
-# 5. Esecuzione principale con gestione errori completa
+def analyze_data(df):
+    """Genera report statistici"""
+    stats = {
+        'Transazioni totali': len(df),
+        'Frodi totali': df['isFraud'].sum(),
+        '% Frodi': round(df['isFraud'].mean() * 100, 2),
+        'Min importo': df['TransactionAmt'].min(),
+        'Max importo': df['TransactionAmt'].max()
+    }
+    
+    product_stats = df.groupby('ProductCD').agg(
+        Transazioni=('isFraud', 'count'),
+        Frodi=('isFraud', 'sum'),
+        Perc_Frodi=('isFraud', lambda x: round(x.mean() * 100, 2))
+    )
+    
+    logger.info("\n=== STATISTICHE ===")
+    for k, v in stats.items():
+        logger.info(f"{k}: {v}")
+    
+    logger.info("\nDistribuzione per categoria:")
+    logger.info(product_stats.to_string())
+    
+    return df
+
+def save_data(df):
+    """Salva i dati processati"""
+    try:
+        df.to_csv(PROCESSED_DATA_PATH, index=False)
+        logger.info(f"Dati salvati in {PROCESSED_DATA_PATH}")
+    except Exception as e:
+        logger.error(f"Errore durante il salvataggio: {str(e)}")
+        raise
+
+def main():
+    try:
+        logger.info("=== INIZIO ELABORAZIONE ===")
+        
+        if not verify_file_structure():
+            sys.exit(1)
+            
+        # Pipeline ETL
+        raw_data = extract_data()
+        filtered_data = filter_data(raw_data)
+        analyzed_data = analyze_data(filtered_data)
+        save_data(analyzed_data)
+        
+        logger.info("=== ELABORAZIONE COMPLETATA CON SUCCESSO ===")
+    
+    except Exception as e:
+        logger.error(f"ERRORE CRITICO: {str(e)}")
+        sys.exit(1)
+
 if __name__ == "__main__":
-    try:
-        logger.info("=== INIZIO ETL ===")
-        
-        # Caricamento
-        logger.info("Fase 1/4 - Caricamento dati")
-        df_raw = load_data()
-        
-        # Filtro
-        logger.info("Fase 2/4 - Filtro dati")
-        df_filtered = filter_data(df_raw)
-        
-        # Ottimizzazione
-        logger.info("Fase 3/4 - Ottimizzazione")
-        df_optimized = optimize_dtypes(df_filtered)
-        
-        # Salvataggio
-        logger.info("Fase 4/4 - Salvataggio")
-        saved_path = save_to_csv(df_optimized)
-        
-        logger.info(f"=== ETL COMPLETATO ===")
-        logger.info(f"Righe finali: {len(df_optimized)}")
-        logger.info(f"Dimensioni file: {saved_path.stat().st_size / (1024*1024):.2f} MB")
-        
-    except Exception as e:
-        logger.critical("ETL FALLITO!", exc_info=True)
-        print(f"\n❌ Errore durante l'ETL. Controlla il log: {log_file.absolute()}\n")
-        raise
+    main()

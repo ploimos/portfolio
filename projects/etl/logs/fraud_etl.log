@@ -1,0 +1,474 @@
+2025-06-16 18:36:01,120 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-16 18:36:01,120 - INFO - Caricamento dati da: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 18:36:04,580 - INFO - Dimensioni iniziali: 590540 righe
+2025-06-16 18:36:04,606 - INFO - Distribuzione originale prodotti:
+ProductCD
+W    0.744522
+C    0.116028
+R    0.063838
+H    0.055922
+S    0.019690
+Name: proportion, dtype: float64
+2025-06-16 18:36:04,831 - INFO - Distribuzione bilanciata:
+ProductCD
+W    0.619384
+R    0.120207
+C    0.117266
+H    0.105737
+S    0.037406
+Name: proportion, dtype: float64
+2025-06-16 18:36:04,832 - INFO - Dimensioni dopo bilanciamento: 223091 righe
+2025-06-16 18:36:04,851 - ERROR - Errore nel salvataggio: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+Traceback (most recent call last):
+  File "C:\Users\mplom\Portfolio\projects\etl\scripts\etl.py", line 96, in save_processed_data
+    df.to_parquet(output_file)
+  File "C:\Users\mplom\AppData\Roaming\Python\Python312\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mplom\AppData\Roaming\Python\Python312\site-packages\pandas\core\frame.py", line 3118, in to_parquet
+    return to_parquet(
+           ^^^^^^^^^^^
+  File "C:\Users\mplom\AppData\Roaming\Python\Python312\site-packages\pandas\io\parquet.py", line 478, in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mplom\AppData\Roaming\Python\Python312\site-packages\pandas\io\parquet.py", line 68, in get_engine
+    raise ImportError(
+ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-06-16 18:36:04,904 - ERROR - === ELABORAZIONE FALLITA ===
+Traceback (most recent call last):
+  File "C:\Users\mplom\Portfolio\projects\etl\scripts\etl.py", line 119, in <module>
+    output_path = save_processed_data(optimized_df)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mplom\Portfolio\projects\etl\scripts\etl.py", line 96, in save_processed_data
+    df.to_parquet(output_file)
+  File "C:\Users\mplom\AppData\Roaming\Python\Python312\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mplom\AppData\Roaming\Python\Python312\site-packages\pandas\core\frame.py", line 3118, in to_parquet
+    return to_parquet(
+           ^^^^^^^^^^^
+  File "C:\Users\mplom\AppData\Roaming\Python\Python312\site-packages\pandas\io\parquet.py", line 478, in to_parquet
+    impl = get_engine(engine)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mplom\AppData\Roaming\Python\Python312\site-packages\pandas\io\parquet.py", line 68, in get_engine
+    raise ImportError(
+ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - Missing optional dependency 'pyarrow'. pyarrow is required for parquet support. Use pip or conda to install pyarrow.
+ - Missing optional dependency 'fastparquet'. fastparquet is required for parquet support. Use pip or conda to install fastparquet.
+2025-06-16 18:37:38,398 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-16 18:37:38,398 - INFO - Caricamento dati da: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 18:37:41,665 - INFO - Dimensioni iniziali: 590540 righe
+2025-06-16 18:37:41,688 - INFO - Distribuzione originale prodotti:
+ProductCD
+W    0.744522
+C    0.116028
+R    0.063838
+H    0.055922
+S    0.019690
+Name: proportion, dtype: float64
+2025-06-16 18:37:41,899 - INFO - Distribuzione bilanciata:
+ProductCD
+W    0.525128
+R    0.148065
+C    0.144443
+H    0.130242
+S    0.052121
+Name: proportion, dtype: float64
+2025-06-16 18:37:41,901 - INFO - Dimensioni dopo bilanciamento: 181116 righe
+2025-06-16 18:37:42,440 - INFO - Dati salvati in: C:\Users\mplom\Portfolio\projects\etl\data\processed\balanced_fraud_data.csv
+2025-06-16 18:37:42,440 - INFO - === ELABORAZIONE COMPLETATA ===
+2025-06-16 19:08:56,251 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 19:08:56,252 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 19:08:56,252 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 19:08:56,252 - INFO - Cartella dati: C:\Users\mplom\Portfolio\projects\etl\data
+2025-06-16 19:08:56,252 - INFO - Percorso file input: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 19:08:56,252 - INFO - Percorso file output: C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 19:08:56,252 - INFO - Percorso log: C:\Users\mplom\Portfolio\projects\etl\logs\fraud_etl.log
+2025-06-16 19:08:56,252 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 19:09:06,547 - INFO - Estrazione completata. Righe trovate: 590540
+2025-06-16 19:09:06,547 - INFO - Inizio trasformazione dati
+2025-06-16 19:09:06,554 - INFO - Applicazione filtro amount statisticamente rilevanti
+2025-06-16 19:09:06,555 - INFO - Somma totale degli amount: 79738948.73
+2025-06-16 19:09:06,556 - INFO - Dataset soddisfa il criterio di rilevanza (somma >= 200)
+2025-06-16 19:09:06,700 - INFO - Trasformazione completata. Righe finali: 590540
+2025-06-16 19:09:06,700 - INFO - Inizio caricamento dati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 19:09:08,565 - INFO - Caricamento completato con successo
+2025-06-16 19:09:08,565 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 19:17:12,758 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 19:17:12,758 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 19:17:12,758 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 19:17:12,759 - INFO - Cartella dati: C:\Users\mplom\Portfolio\projects\etl\data
+2025-06-16 19:17:12,759 - INFO - Percorso file input: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 19:17:12,759 - INFO - Percorso file output: C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 19:17:12,759 - INFO - Percorso log: C:\Users\mplom\Portfolio\projects\etl\logs\fraud_etl.log
+2025-06-16 19:17:12,759 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 19:17:25,555 - INFO - Estrazione completata. Righe trovate: 590540
+2025-06-16 19:17:25,560 - INFO - Inizio trasformazione dati
+2025-06-16 19:17:25,560 - INFO - Applicazione filtri avanzati
+2025-06-16 19:17:25,905 - INFO - Righe dopo filtro TransactionAmt <= 350000: 590540
+2025-06-16 19:17:26,398 - INFO - Righe dopo filtro somma occorrenze >= 100: 485718
+2025-06-16 19:17:26,399 - INFO - Valori TransactionAmt unici rimasti: 367
+2025-06-16 19:17:26,652 - INFO - Trasformazione completata. Righe finali: 485718
+2025-06-16 19:17:26,652 - INFO - Inizio caricamento dati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 19:17:27,144 - INFO - Caricamento completato con successo
+2025-06-16 19:17:27,144 - INFO - 
+=== STATISTICHE FINALI ===
+2025-06-16 19:17:27,144 - INFO - Transazioni totali: 485718
+2025-06-16 19:17:27,146 - INFO - Transazioni fraudolente: 12666
+2025-06-16 19:17:27,151 - INFO - Valori TransactionAmt unici: 365
+2025-06-16 19:17:27,164 - INFO - ProductCD unici: 5
+2025-06-16 19:17:27,164 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 19:30:04,077 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 19:30:04,077 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 19:30:04,078 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 19:30:04,078 - INFO - Cartella dati: C:\Users\mplom\Portfolio\projects\etl\data
+2025-06-16 19:30:04,078 - INFO - Percorso file input: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 19:30:04,078 - INFO - Percorso file output: C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 19:30:04,078 - INFO - Percorso log: C:\Users\mplom\Portfolio\projects\etl\logs\fraud_etl.log
+2025-06-16 19:30:04,078 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 19:30:14,834 - INFO - Estrazione completata. Righe trovate: 590540
+2025-06-16 19:30:14,834 - INFO - Inizio trasformazione dati
+2025-06-16 19:30:14,834 - INFO - Applicazione filtri avanzati
+2025-06-16 19:30:15,201 - INFO - Righe rimosse (TransactionAmt > 32000): 0
+2025-06-16 19:30:15,202 - INFO - Righe dopo filtro TransactionAmt <= 32000: 590540
+2025-06-16 19:30:15,667 - INFO - Righe rimosse (somma occorrenze < 100): 104822
+2025-06-16 19:30:15,668 - INFO - Righe dopo filtro somma occorrenze >= 100: 485718
+2025-06-16 19:30:15,668 - INFO - Valori TransactionAmt unici rimasti: 367
+2025-06-16 19:30:15,921 - INFO - Trasformazione completata. Righe finali: 485718
+2025-06-16 19:30:15,921 - INFO - Inizio caricamento dati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 19:30:16,396 - INFO - Caricamento completato con successo
+2025-06-16 19:30:16,396 - INFO - 
+=== STATISTICHE FINALI ===
+2025-06-16 19:30:16,396 - INFO - Transazioni totali: 485718
+2025-06-16 19:30:16,397 - INFO - Transazioni fraudolente: 12666
+2025-06-16 19:30:16,398 - INFO - Percentuale frodi: 2.61%
+2025-06-16 19:30:16,402 - INFO - Valori TransactionAmt unici: 365
+2025-06-16 19:30:16,416 - INFO - ProductCD unici: 5
+2025-06-16 19:30:16,417 - INFO - 
+=== DISTRIBUZIONE IMPORTI ===
+2025-06-16 19:30:16,419 - INFO - Importo medio: 112.06
+2025-06-16 19:30:16,420 - INFO - Importo massimo: 2161.00
+2025-06-16 19:30:16,421 - INFO - Importo minimo: 0.88
+2025-06-16 19:30:16,421 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 19:45:47,933 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 19:45:47,934 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 19:45:47,934 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 19:45:47,934 - INFO - Cartella dati: C:\Users\mplom\Portfolio\projects\etl\data
+2025-06-16 19:45:47,934 - INFO - Percorso file input: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 19:45:47,934 - INFO - Percorso file output: C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 19:45:47,934 - INFO - Percorso log: C:\Users\mplom\Portfolio\projects\etl\logs\fraud_etl.log
+2025-06-16 19:45:47,934 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 19:46:00,282 - INFO - Estrazione completata. Righe trovate: 590540
+2025-06-16 19:46:00,284 - INFO - Inizio trasformazione dati
+2025-06-16 19:46:00,284 - INFO - Applicazione filtri avanzati
+2025-06-16 19:46:00,795 - INFO - Righe rimosse (TransactionAmt > 15000): 2
+2025-06-16 19:46:00,795 - INFO - Righe dopo filtro TransactionAmt <= 15000: 590538
+2025-06-16 19:46:01,371 - INFO - Righe dopo filtri TransactionAmt: 494991
+2025-06-16 19:46:01,371 - INFO - Valori TransactionAmt unici validi: 583
+2025-06-16 19:46:01,760 - INFO - Righe dopo filtro ProductCD: 494991
+2025-06-16 19:46:01,761 - INFO - ProductCD validi: 5
+2025-06-16 19:46:01,880 - INFO - Trasformazione completata. Righe finali: 494991
+2025-06-16 19:46:01,880 - INFO - Inizio caricamento dati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 19:46:02,374 - INFO - Caricamento completato con successo
+2025-06-16 19:46:02,374 - INFO - 
+=== STATISTICHE FINALI ===
+2025-06-16 19:46:02,375 - INFO - Transazioni totali: 494991
+2025-06-16 19:46:02,375 - INFO - Transazioni fraudolente: 14680
+2025-06-16 19:46:02,376 - INFO - Percentuale frodi: 2.97%
+2025-06-16 19:46:02,377 - INFO - 
+=== DISTRIBUZIONE TRANSACTIONAMT ===
+2025-06-16 19:46:02,382 - INFO - Valori unici: 574
+2025-06-16 19:46:02,383 - INFO - Media: 112.03
+2025-06-16 19:46:02,384 - INFO - Massimo: 2161.00
+2025-06-16 19:46:02,386 - INFO - Minimo: 4.11
+2025-06-16 19:46:02,386 - INFO - 
+=== DISTRIBUZIONE PRODUCTCD ===
+2025-06-16 19:46:02,406 - INFO - W: 394698 transazioni
+2025-06-16 19:46:02,407 - INFO - R: 37540 transazioni
+2025-06-16 19:46:02,407 - INFO - H: 32920 transazioni
+2025-06-16 19:46:02,407 - INFO - C: 18550 transazioni
+2025-06-16 19:46:02,407 - INFO - S: 11283 transazioni
+2025-06-16 19:46:02,407 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 19:54:29,292 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 19:54:29,293 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 19:54:29,293 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 19:54:29,293 - INFO - Cartella dati: C:\Users\mplom\Portfolio\projects\etl\data
+2025-06-16 19:54:29,293 - INFO - Percorso file input: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 19:54:29,293 - INFO - Percorso file output: C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 19:54:29,294 - INFO - Percorso log: C:\Users\mplom\Portfolio\projects\etl\logs\fraud_etl.log
+2025-06-16 19:54:29,294 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 19:54:32,401 - INFO - Estrazione completata. Righe trovate: 590540
+2025-06-16 19:54:32,402 - INFO - Inizio trasformazione dati
+2025-06-16 19:54:32,402 - INFO - Applicazione filtri in sequenza
+2025-06-16 19:54:32,413 - INFO - Dopo filtro TransactionAmt <= 15000: 590538 righe
+2025-06-16 19:54:32,446 - INFO - Dopo filtro ProductCD (min 500 occ.): 590538 righe
+2025-06-16 19:54:32,490 - INFO - Dopo filtro transazioni (min 50 totali e 1 frodi): 494991 righe
+2025-06-16 19:54:32,490 - INFO - TransactionAmt unici rimasti: 583
+2025-06-16 19:54:32,493 - INFO - Trasformazione completata. Righe finali: 494991
+2025-06-16 19:54:32,494 - INFO - Inizio caricamento dati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 19:54:32,963 - INFO - Caricamento completato con successo
+2025-06-16 19:54:33,013 - INFO - 
+=== STATISTICHE AVANZATE ===
+2025-06-16 19:54:33,013 - INFO - Transazioni totali: 494991
+2025-06-16 19:54:33,014 - INFO - Transazioni fraudolente: 14680
+2025-06-16 19:54:33,015 - INFO - Percentuale frodi: 2.97%
+2025-06-16 19:54:33,016 - INFO - 
+TOP TRANSACTIONAMT PER FRODI:
+2025-06-16 19:54:33,019 - INFO - Amount 117.0 (Product W): 719 frodi su 28932 transazioni
+2025-06-16 19:54:33,019 - INFO - Amount 59.0 (Product W): 646 frodi su 30575 transazioni
+2025-06-16 19:54:33,019 - INFO - Amount 49.0 (Product W): 469 frodi su 15989 transazioni
+2025-06-16 19:54:33,020 - INFO - Amount 150.0 (Product H): 406 frodi su 2172 transazioni
+2025-06-16 19:54:33,020 - INFO - Amount 226.0 (Product W): 390 frodi su 11704 transazioni
+2025-06-16 19:54:33,020 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 20:02:04,169 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 20:02:04,169 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 20:02:04,169 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 20:02:04,169 - INFO - Cartella dati: C:\Users\mplom\Portfolio\projects\etl\data
+2025-06-16 20:02:04,169 - INFO - Percorso file input: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:02:04,169 - INFO - Percorso file output: C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:02:04,169 - INFO - Percorso log: C:\Users\mplom\Portfolio\projects\etl\logs\fraud_etl.log
+2025-06-16 20:02:04,170 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:02:07,284 - INFO - Estrazione completata. Righe trovate: 590540
+2025-06-16 20:02:07,285 - INFO - Inizio trasformazione dati
+2025-06-16 20:02:07,285 - INFO - Applicazione filtri in sequenza
+2025-06-16 20:02:07,295 - INFO - Dopo filtro TransactionAmt <= 10000: 590538 righe
+2025-06-16 20:02:07,328 - INFO - Dopo filtro ProductCD (min 1000 occ.): 590538 righe
+2025-06-16 20:02:07,374 - INFO - Dopo filtro transazioni (min 50 totali e 1 frodi): 494991 righe
+2025-06-16 20:02:07,374 - INFO - TransactionAmt unici rimasti: 583
+2025-06-16 20:02:07,377 - INFO - Trasformazione completata. Righe finali: 494991
+2025-06-16 20:02:07,377 - INFO - Inizio caricamento dati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:02:07,843 - INFO - Caricamento completato con successo
+2025-06-16 20:02:07,878 - INFO - 
+=== STATISTICHE AVANZATE ===
+2025-06-16 20:02:07,879 - INFO - Transazioni totali: 494991
+2025-06-16 20:02:07,879 - INFO - Transazioni fraudolente: 14680
+2025-06-16 20:02:07,880 - INFO - Percentuale frodi: 2.97%
+2025-06-16 20:02:07,880 - INFO - 
+TOP TRANSACTIONAMT PER FRODI:
+2025-06-16 20:02:07,881 - INFO - Amount 117.0 (Product W): 719 frodi su 28932 transazioni
+2025-06-16 20:02:07,882 - INFO - Amount 59.0 (Product W): 646 frodi su 30575 transazioni
+2025-06-16 20:02:07,882 - INFO - Amount 49.0 (Product W): 469 frodi su 15989 transazioni
+2025-06-16 20:02:07,882 - INFO - Amount 150.0 (Product H): 406 frodi su 2172 transazioni
+2025-06-16 20:02:07,882 - INFO - Amount 226.0 (Product W): 390 frodi su 11704 transazioni
+2025-06-16 20:02:07,882 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 20:10:05,168 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 20:10:05,169 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 20:10:05,169 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 20:10:05,169 - INFO - Cartella dati: C:\Users\mplom\Portfolio\projects\etl\data
+2025-06-16 20:10:05,169 - INFO - Percorso file input: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:10:05,169 - INFO - Percorso file output: C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:10:05,169 - INFO - Percorso log: C:\Users\mplom\Portfolio\projects\etl\logs\fraud_etl.log
+2025-06-16 20:10:05,170 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:10:08,271 - INFO - Estrazione completata. Righe trovate: 590540
+2025-06-16 20:10:08,271 - INFO - Inizio trasformazione e aggregazione dati
+2025-06-16 20:10:08,272 - INFO - Applicazione filtri preliminari
+2025-06-16 20:10:08,282 - INFO - Dopo filtro TransactionAmt <= 15000: 590538 righe
+2025-06-16 20:10:08,314 - INFO - Dopo filtro ProductCD (min 500 occ.): 590538 righe
+2025-06-16 20:10:08,378 - INFO - Trasformazione completata. Gruppi validi: 356
+2025-06-16 20:10:08,379 - INFO - Inizio caricamento dati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:10:08,382 - INFO - Caricamento completato con successo
+2025-06-16 20:10:08,382 - INFO - 
+=== STATISTICHE AVANZATE ===
+2025-06-16 20:10:08,382 - INFO - Gruppi unici (ProductCD + TransactionAmt): 356
+2025-06-16 20:10:08,383 - INFO - Transazioni totali: 38892
+2025-06-16 20:10:08,383 - INFO - Frodi totali: 3351
+2025-06-16 20:10:08,383 - INFO - 
+TOP 5 TRANSAZIONI PER FRODI:
+2025-06-16 20:10:08,385 - INFO - Product C | Amount 77.34 | Frodi: 66/86 | Totale: $6,651.24
+2025-06-16 20:10:08,385 - INFO - Product S | Amount 15.0 | Frodi: 66/642 | Totale: $9,630.00
+2025-06-16 20:10:08,385 - INFO - Product C | Amount 33.53 | Frodi: 60/272 | Totale: $9,120.16
+2025-06-16 20:10:08,385 - INFO - Product C | Amount 35.97 | Frodi: 55/110 | Totale: $3,956.70
+2025-06-16 20:10:08,386 - INFO - Product C | Amount 35.35 | Frodi: 48/292 | Totale: $10,322.20
+2025-06-16 20:10:08,386 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 20:17:42,164 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 20:17:42,164 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 20:17:42,165 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 20:17:42,165 - INFO - Cartella dati: C:\Users\mplom\Portfolio\projects\etl\data
+2025-06-16 20:17:42,165 - INFO - Percorso file input: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:17:42,165 - INFO - Percorso file output: C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:17:42,165 - INFO - Percorso log: C:\Users\mplom\Portfolio\projects\etl\logs\fraud_etl.log
+2025-06-16 20:17:42,165 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:17:45,514 - INFO - Estrazione completata. Righe trovate: 590540
+2025-06-16 20:17:45,514 - INFO - Inizio trasformazione dati
+2025-06-16 20:17:45,546 - INFO - Dopo filtro ProductCD (min 500 occorrenze): 590540 righe
+2025-06-16 20:17:45,588 - INFO - Transazioni finali che soddisfano tutti i criteri: 32421
+2025-06-16 20:17:45,592 - INFO - Inizio caricamento dati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:17:45,625 - INFO - Caricamento completato con successo
+2025-06-16 20:17:45,625 - INFO - 
+=== STATISTICHE FINALI ===
+2025-06-16 20:17:45,625 - INFO - Transazioni totali: 32421
+2025-06-16 20:17:45,625 - INFO - Transazioni fraudolente: 2857
+2025-06-16 20:17:45,630 - INFO - ProductCD unici: 4
+2025-06-16 20:17:45,631 - INFO - TransactionAmt unici: 302
+2025-06-16 20:17:45,632 - INFO - 
+TOP 5 TRANSAZIONI PER FRODI:
+2025-06-16 20:17:45,632 - INFO - Amount 77.34: 66 frodi
+2025-06-16 20:17:45,632 - INFO - Amount 33.53: 60 frodi
+2025-06-16 20:17:45,632 - INFO - Amount 35.97: 55 frodi
+2025-06-16 20:17:45,632 - INFO - Amount 35.35: 48 frodi
+2025-06-16 20:17:45,633 - INFO - Amount 24.84: 45 frodi
+2025-06-16 20:17:45,633 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 20:20:24,671 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 20:20:24,671 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 20:20:24,671 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 20:20:24,671 - INFO - Cartella dati: C:\Users\mplom\Portfolio\projects\etl\data
+2025-06-16 20:20:24,671 - INFO - Percorso file input: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:20:24,672 - INFO - Percorso file output: C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:20:24,672 - INFO - Percorso log: C:\Users\mplom\Portfolio\projects\etl\logs\fraud_etl.log
+2025-06-16 20:20:24,672 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:20:27,837 - INFO - Estrazione completata. Righe trovate: 590540
+2025-06-16 20:20:27,837 - INFO - Inizio trasformazione dati
+2025-06-16 20:20:27,870 - INFO - Dopo filtro ProductCD (min 500 occorrenze): 590540 righe
+2025-06-16 20:20:27,910 - INFO - Transazioni finali che soddisfano tutti i criteri: 17712
+2025-06-16 20:20:27,914 - INFO - Inizio caricamento dati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:20:27,933 - INFO - Caricamento completato con successo
+2025-06-16 20:20:27,933 - INFO - 
+=== STATISTICHE FINALI ===
+2025-06-16 20:20:27,934 - INFO - Transazioni totali: 17712
+2025-06-16 20:20:27,934 - INFO - Transazioni fraudolente: 2168
+2025-06-16 20:20:27,935 - INFO - ProductCD unici: 4
+2025-06-16 20:20:27,935 - INFO - TransactionAmt unici: 221
+2025-06-16 20:20:27,936 - INFO - 
+TOP 5 TRANSAZIONI PER FRODI:
+2025-06-16 20:20:27,936 - INFO - Amount 35.97: 55 frodi
+2025-06-16 20:20:27,936 - INFO - Amount 35.35: 48 frodi
+2025-06-16 20:20:27,936 - INFO - Amount 24.84: 45 frodi
+2025-06-16 20:20:27,937 - INFO - Amount 14.32: 44 frodi
+2025-06-16 20:20:27,937 - INFO - Amount 22.91: 42 frodi
+2025-06-16 20:20:27,937 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 20:42:48,408 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 20:42:48,408 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 20:42:48,409 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 20:42:48,409 - INFO - Cartella dati: C:\Users\mplom\Portfolio\projects\etl\data
+2025-06-16 20:42:48,409 - INFO - Percorso file input: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:42:48,409 - INFO - Percorso file output: C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:42:48,410 - INFO - Percorso log: C:\Users\mplom\Portfolio\projects\etl\logs\fraud_etl.log
+2025-06-16 20:42:48,410 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:42:51,576 - INFO - Estrazione completata. Righe trovate: 590540
+2025-06-16 20:42:51,576 - INFO - Inizio trasformazione dati con i nuovi filtri
+2025-06-16 20:42:51,608 - INFO - Dopo filtro ProductCD (min 100 occorrenze): 590540 righe
+2025-06-16 20:42:51,649 - INFO - Transazioni finali che soddisfano tutti i criteri: 18888
+2025-06-16 20:42:51,652 - INFO - Inizio caricamento dati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:42:51,673 - INFO - Caricamento completato con successo
+2025-06-16 20:42:51,674 - INFO - 
+=== STATISTICHE FINALI ===
+2025-06-16 20:42:51,674 - INFO - Transazioni totali: 18888
+2025-06-16 20:42:51,675 - INFO - Transazioni fraudolente: 4130
+2025-06-16 20:42:51,675 - INFO - ProductCD unici: 3
+2025-06-16 20:42:51,676 - INFO - TransactionAmt unici: 1327
+2025-06-16 20:42:51,677 - INFO - 
+TOP 5 TRANSAZIONI PER FRODI:
+2025-06-16 20:42:51,677 - INFO - Amount 14.32: 45 frodi
+2025-06-16 20:42:51,677 - INFO - Amount 10.39: 34 frodi
+2025-06-16 20:42:51,677 - INFO - Amount 7.93: 25 frodi
+2025-06-16 20:42:51,677 - INFO - Amount 16.35: 24 frodi
+2025-06-16 20:42:51,677 - INFO - Amount 8.36: 23 frodi
+2025-06-16 20:42:51,677 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 20:46:29,126 - INFO - === INIZIO ETL PROCESS ===
+2025-06-16 20:46:29,126 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 20:46:29,126 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 20:46:29,127 - INFO - Cartella dati: C:\Users\mplom\Portfolio\projects\etl\data
+2025-06-16 20:46:29,127 - INFO - Percorso file input: C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:46:29,127 - INFO - Percorso file output: C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:46:29,127 - INFO - Percorso log: C:\Users\mplom\Portfolio\projects\etl\logs\fraud_etl.log
+2025-06-16 20:46:29,127 - INFO - Inizio estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:46:32,233 - INFO - Estrazione completata. Righe trovate: 590540
+2025-06-16 20:46:32,234 - INFO - Inizio trasformazione dati
+2025-06-16 20:46:32,274 - INFO - Transazioni finali che soddisfano tutti i criteri: 18888
+2025-06-16 20:46:32,276 - INFO - Inizio caricamento dati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:46:32,298 - INFO - Caricamento completato con successo
+2025-06-16 20:46:32,298 - INFO - 
+=== STATISTICHE FINALI ===
+2025-06-16 20:46:32,298 - INFO - Transazioni totali: 18888
+2025-06-16 20:46:32,300 - INFO - Transazioni fraudolente: 4130
+2025-06-16 20:46:32,300 - INFO - ProductCD unici: 3
+2025-06-16 20:46:32,300 - INFO - TransactionAmt unici: 1327
+2025-06-16 20:46:32,301 - INFO - 
+TOP 5 TRANSAZIONI PER FRODI:
+2025-06-16 20:46:32,301 - INFO - Amount 14.32: 45 frodi
+2025-06-16 20:46:32,301 - INFO - Amount 10.39: 34 frodi
+2025-06-16 20:46:32,301 - INFO - Amount 7.93: 25 frodi
+2025-06-16 20:46:32,301 - INFO - Amount 16.35: 24 frodi
+2025-06-16 20:46:32,301 - INFO - Amount 8.36: 23 frodi
+2025-06-16 20:46:32,302 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 20:50:21,434 - INFO - === INIZIO PROCESSO ===
+2025-06-16 20:50:21,434 - INFO - 
+=== STRUTTURA FILE ===
+2025-06-16 20:50:21,434 - INFO - Cartella script: C:\Users\mplom\Portfolio\projects\etl\scripts
+2025-06-16 20:50:21,434 - INFO - Estrazione dati da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 20:50:24,795 - INFO - Calcolo statistiche per gruppo...
+2025-06-16 20:50:24,916 - INFO - Gruppi validi: 1423
+2025-06-16 20:50:24,917 - INFO - Transazioni finali: 19093
+2025-06-16 20:50:24,938 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 20:50:24,938 - INFO - 
+=== STATISTICHE ===
+2025-06-16 20:50:24,938 - INFO - Transazioni totali: 19093
+2025-06-16 20:50:24,939 - INFO - Frodi totali: 4205
+2025-06-16 20:50:24,940 - INFO - Importo 14.325: 44 frodi
+2025-06-16 20:50:24,941 - INFO - Importo 10.392: 34 frodi
+2025-06-16 20:50:24,941 - INFO - Importo 16.354: 24 frodi
+2025-06-16 20:50:24,941 - INFO - Importo 8.361: 23 frodi
+2025-06-16 20:50:24,941 - INFO - Importo 20.845: 23 frodi
+2025-06-16 20:50:24,941 - INFO - === PROCESSO COMPLETATO ===
+2025-06-16 21:25:21,231 - INFO - === INIZIO ETL ===
+2025-06-16 21:25:21,231 - INFO - Caricamento dati reali da C:\Users\mplom\Portfolio\projects\etl\data\raw\train_transaction.csv
+2025-06-16 21:25:24,347 - INFO - Filtraggio dati...
+2025-06-16 21:25:24,407 - INFO - Transazioni valide: 820 (su 242283 iniziali)
+2025-06-16 21:25:24,408 - INFO - Distribuzione finale:
+ProductCD
+C    688
+W    117
+S     11
+H      4
+Name: count, dtype: int64
+2025-06-16 21:25:24,412 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 21:25:24,414 - INFO - 
+=== FRODI PER CATEGORIA ===
+2025-06-16 21:25:24,414 - INFO -            sum  count   mean
+ProductCD                   
+C          452    688  0.657
+H            2      4  0.500
+S            6     11  0.545
+W           79    117  0.675
+2025-06-16 21:25:24,424 - INFO - === ETL COMPLETATO ===
+2025-06-16 21:42:03,458 - INFO - === INIZIO ELABORAZIONE ===
+2025-06-16 21:42:03,458 - INFO - Caricamento dati in corso...
+2025-06-16 21:42:06,609 - INFO - 
+=== STATISTICHE ===
+2025-06-16 21:42:06,610 - INFO - Transazioni totali: 242283
+2025-06-16 21:42:06,610 - INFO - Frodi totali: 8565
+2025-06-16 21:42:06,610 - INFO - % Frodi: 3.54
+2025-06-16 21:42:06,610 - INFO - Min importo: 100.0
+2025-06-16 21:42:06,610 - INFO - Max importo: 31937.391
+2025-06-16 21:42:06,610 - INFO - 
+Distribuzione per categoria:
+2025-06-16 21:42:06,612 - INFO -            Transazioni  Frodi  Perc_Frodi
+ProductCD                                
+C                 4969    812       16.34
+H                 9999   1097       10.97
+R                31825   1353        4.25
+S                 2802    148        5.28
+W               192688   5155        2.68
+2025-06-16 21:42:06,853 - INFO - Dati salvati in C:\Users\mplom\Portfolio\projects\etl\data\processed\powerbi_ready_data.csv
+2025-06-16 21:42:06,854 - INFO - === ELABORAZIONE COMPLETATA CON SUCCESSO ===
