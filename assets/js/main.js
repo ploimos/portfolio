@@ -332,4 +332,30 @@
 
 			});
 
+			// Form 
+			(function() {
+				const form = document.getElementById('myForm');
+				if (!form) return; // Se il form non esiste, esci
+
+				form.addEventListener('submit', async function(e) {
+					e.preventDefault();
+					
+					try {
+						const response = await fetch(form.action, {
+							method: 'POST',
+							body: new FormData(form),
+							headers: { 'Accept': 'application/json' }
+						});
+						
+						if (response.ok) {
+							form.style.display = 'none';
+							document.getElementById('success-message').style.display = 'block';
+							form.reset();
+						}
+					} catch (error) {
+						alert("Errore nell'invio");
+					}
+				});
+			})();
+
 })(jQuery);
