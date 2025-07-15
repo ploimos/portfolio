@@ -1,0 +1,11 @@
+﻿ProductCD,Legittimo,Somma di TransactionAmt
+Elettronica,true,2946423901
+Casa,true,553740622
+Casa,false,113746684
+Abbigliamento,true,56764000
+Elettronica,false,43413861
+Lusso,true,11909880
+Sport,true,4878615
+Abbigliamento,false,3443000
+Lusso,false,2229660
+Sport,false,252300
