@@ -49,21 +49,8 @@
 						</ul>
 					</nav>
 
-				<!-- Zero WIP -->
+				<!-- -->
 					<div id="main" class="alt">
-						<div class="inner" style="text-align: justify">
-							
-                            <header class="major" style="text-align: center;">
-                                <h1>WORK IN PROGRESS!</h1>
-                            </header>
-                            <span class="image main"><img src="../../images/pic11.jpg" alt="" /></span>
-                            <p>Questa pagina è ancora in fase di sviluppo. <br>
-                            Se dovessi avere qualche perplessità, non esitare a contattarci!</p>
-                            <ul class="actions">
-                                <li><a href="../../index.html#contact" class="button next">Contattaci</a></li>
-                            </ul>
-                            
-                        </div>
 
 						<!-- One -->
 						<section id="dwh">
@@ -71,19 +58,152 @@
 								<header class="major">
 									<h1>Data Warehouse</h1>
 								</header>
-								<p>L'implementazione teorica del DWH per <strong>ARDEO S.H. - FTRS</strong> prevederebbe:</p>
-								<ul>
-									<li><strong>Schema ottimizzato</strong>: Modello a stella con <code>fact_transactions</code> 
-										(30+ campi) e dimensioni correlate (<code>dim_users</code>, <code>dim_time</code>)</li>
-									<li><strong>Cloud Integration</strong>: Azure SQL DB con tier S1 (Standard) per gestire 10+ 
-										TB di dati storici</li>
-									<li><strong>ETL Orchestration</strong>: Azure Data Factory per pipeline giornaliere con 
-										trasformazioni T-SQL complesse</li>
-									<li><strong>Data Quality</strong>: Check di integrità referenziale e stored procedure di 
-										sanitizzazione</li>
-								</ul>
-								<p>Nella pratica, implementerò una versione semplificata usando <strong>SQLite</strong> (per 
-									il modello concettuale) e <strong>PostgreSQL gratuito</strong> (su Azure Free Tier) con dataset campione ridotto.</p>
+								<p>Un <strong>Data Warehouse</strong> (DWH) è un sistema di archiviazione centralizzato che integra dati da diverse fonti, 
+									ottimizzandoli per analisi e reporting. Nel progetto ARDEO S.H. - FTSR, il DWH è progettato per 
+									tracciare transazioni, utenti e frodi.</p>
+							</div>
+						</section>
+
+						<!-- Two -->
+						<section id="dwh1">
+							<div class="inner">
+								<header class="major">
+									<h1>Diagramma E/R</h1>
+								</header>
+								<span class="image fit">
+									<img src="images/Diagram_ER.png" alt="Diagramma E/R" style="max-width:100%; height:auto; display:block;">
+								</span>
+							</div>
+						</section>
+
+						<!-- Three -->
+						<section id="dwh2">
+							<div class="inner">
+							<header class="major">
+								<h1>Possibili query</h1>
+							</header>
+
+							<!-- Query 1 -->
+							<p><strong>Analisi Frodi: Andamento Temporale</strong></p>
+<pre><code>-- Frodi per mese/anno con trend
+SELECT
+    DATE_TRUNC('month', transaction_date) AS mese,
+    COUNT(*) AS transazioni_totali,
+    SUM(CASE WHEN is_fraud THEN 1 ELSE 0 END) AS frodi,
+    ROUND(100.0 * SUM(CASE WHEN is_fraud THEN 1 ELSE 0 END) / COUNT(*), 2) AS percentuale_frodi
+FROM fact_transactions
+GROUP BY mese
+ORDER BY mese;</code></pre>
+							<p><strong>Utilizzo:</strong> Identifica stagionalità nelle frodi.</p>
+
+							<!-- Query 2 -->
+							<p><strong>Top 5 Paesi a Rischio</strong></p>
+<pre><code>-- Paesi con più frodi (in valore assoluto e percentuale)
+SELECT
+    c.country_name AS paese,
+    COUNT(*) AS transazioni_totali,
+    SUM(CASE WHEN t.is_fraud THEN 1 ELSE 0 END) AS frodi,
+    ROUND(AVG(t.amount), 2) AS importo_medio_frode
+FROM fact_transactions t
+JOIN dim_countries c ON t.country_id = c.country_id
+GROUP BY c.country_name
+ORDER BY frodi DESC
+LIMIT 5;</code></pre>
+							<p><strong>Utilizzo:</strong> Geografia delle frodi per focalizzare controlli.</p>
+
+							<!-- Query 3 -->
+							<p><strong>Analisi per Tipo di Carta</strong></p>
+<pre><code>-- Frodi per tipo carta (Credit/Debit) e brand
+SELECT
+    ct.type_name AS tipo_carta,
+    cb.brand_name AS brand,
+    COUNT(*) AS transazioni,
+    SUM(CASE WHEN t.is_fraud THEN 1 ELSE 0 END) AS frodi
+FROM fact_transactions t
+JOIN dim_card_types ct ON t.card_type_id = ct.card_type_id
+JOIN dim_card_brands cb ON t.card_brand_id = cb.brand_id
+GROUP BY ct.type_name, cb.brand_name
+ORDER BY frodi DESC;</code></pre>
+							<p><strong>Utilizzo:</strong> Individua le carte più vulnerabili.</p>
+
+							<!-- Query 4 -->
+							<p><strong>Email Provider a Rischio</strong></p>
+<pre><code>-- Provider email associati a frodi
+SELECT
+    e.provider_name AS email_provider,
+    COUNT(*) AS transazioni,
+    SUM(CASE WHEN t.is_fraud THEN 1 ELSE 0 END) AS frodi,
+    ROUND(100.0 * SUM(CASE WHEN t.is_fraud THEN 1 ELSE 0 END) / COUNT(*), 1) AS tasso_frode
+FROM fact_transactions t
+JOIN dim_email_providers e ON t.provider_id = e.provider_id
+GROUP BY e.provider_name
+HAVING SUM(CASE WHEN t.is_fraud THEN 1 ELSE 0 END) > 0
+ORDER BY tasso_frode DESC;</code></pre>
+							<p><strong>Utilizzo:</strong> Indirizzi email sospetti da bloccare.</p>
+
+							<!-- Query 5 -->
+							<p><strong>Transazioni Fraudolente "Atipiche"</strong></p>
+<pre><code>-- Frodi con importo > 3 deviazioni standard dalla media
+WITH stats AS (
+    SELECT
+        AVG(amount) AS avg_amount,
+        STDDEV(amount) AS std_amount
+    FROM fact_transactions
+    WHERE is_fraud = TRUE
+)
+SELECT
+    t.transaction_id,
+    t.amount,
+    t.transaction_date,
+    c.country_name
+FROM fact_transactions t
+JOIN dim_countries c ON t.country_id = c.country_id
+CROSS JOIN stats
+WHERE t.is_fraud = TRUE
+  AND t.amount > (stats.avg_amount + 3 * stats.std_amount)
+ORDER BY t.amount DESC;</code></pre>
+							<p><strong>Utilizzo:</strong> Rileva frodi con importi anomali.</p>
+
+							<!-- Query 6 -->
+							<p><strong>Customer Profiling (Utenti Premium vs Non Premium)</strong></p>
+<pre><code>-- Confronto frodi tra utenti premium e non
+SELECT
+    u.is_premium,
+    COUNT(*) AS transazioni,
+    SUM(CASE WHEN t.is_fraud THEN 1 ELSE 0 END) AS frodi,
+    ROUND(100.0 * SUM(CASE WHEN t.is_fraud THEN 1 ELSE 0 END) / COUNT(*), 2) AS tasso_frode
+FROM fact_transactions t
+JOIN dim_users u ON t.user_id = u.user_id
+GROUP BY u.is_premium;</code></pre>
+							<p><strong>Utilizzo:</strong> Verifica se gli account premium sono più sicuri.</p>
+
+							<!-- Query 7 -->
+							<p><strong>Heatmap Oraria delle Frodi</strong></p>
+<pre><code>-- Frodi per ora del giorno
+SELECT
+    EXTRACT(HOUR FROM transaction_date) AS ora,
+    COUNT(*) AS transazioni,
+    SUM(CASE WHEN is_fraud THEN 1 ELSE 0 END) AS frodi
+FROM fact_transactions
+GROUP BY ora
+ORDER BY ora;</code></pre>
+							<p><strong>Utilizzo:</strong> Individua gli orari più rischiosi.</p>
+
+							<!-- Query 8 -->
+							<p><strong>Analisi Cross-Product</strong></p>
+<pre><code>-- Combinazioni prodotto/carta più rischiose
+SELECT
+    p.product_id,
+    cb.brand_name AS carta,
+    COUNT(*) AS transazioni,
+    SUM(CASE WHEN t.is_fraud THEN 1 ELSE 0 END) AS frodi
+FROM fact_transactions t
+JOIN dim_products p ON t.product_id = p.product_id
+JOIN dim_card_brands cb ON t.card_brand_id = cb.brand_id
+GROUP BY p.product_id, cb.brand_name
+HAVING SUM(CASE WHEN t.is_fraud THEN 1 ELSE 0 END) > 0
+ORDER BY frodi DESC;</code></pre>
+							<p><strong>Utilizzo:</strong> Trova pattern tra prodotti e metodi di pagamento.</p>
 							</div>
 						</section>
 
