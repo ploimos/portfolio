@@ -19,26 +19,13 @@ Priorità alta:
 - [x] Dashboard Power BI (99%)
 - [x] Data Warehouse (85%)
 - [x] Modello ML (85%)
-- [ ] Reporting automatico (40%)
-- [ ] Ottimizzazione DWH (40%)
+- [x] Reporting automatico (85%)
+- [x] Ottimizzazione DWH (85%)
 
 Priorità media:
-- [x] Sezione About Me (85%)
+- [x] Sezione About Me (99%)
 
 Priorità bassa:
 - [ ] Aggiornare icone (0%)
 - [ ] Selezionare immagini in alta risoluzione (0%)
 - [ ] Realizzazione pagine fittizie per ARDEO SH (0%)
----
-
-## 🧩 Progetti  
-
-### 1. 📊 **Progetto 1**  
-```bash
-📂 /projects/powerbi  
-🛠️ Power BI, SQL, Azure  
-📌 Stato: In sviluppo 
-
-- **Tecnologie**: ///
-- **Descrizione**: ///
-- [Vedi codice](///)
