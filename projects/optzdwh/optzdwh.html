@@ -49,43 +49,79 @@
 						</ul>
 					</nav>
 
-				<!-- Zero WIP -->
+				<!-- -->
 					<div id="main" class="alt">
-						<div class="inner" style="text-align: justify">
-							
-                            <header class="major" style="text-align: center;">
-                                <h1>WORK IN PROGRESS!</h1>
-                            </header>
-                            <span class="image main"><img src="../../images/pic11.jpg" alt="" /></span>
-                            <p>Questa pagina è ancora in fase di sviluppo. <br>
-                            Se dovessi avere qualche perplessità, non esitare a contattarci!</p>
-                            <ul class="actions">
-                                <li><a href="../../index.html#contact" class="button next">Contattaci</a></li>
-                            </ul>
-                            
-                        </div>
 
 						<!-- One -->
-						<section id="optimization">
+						<section id="dwh-opt">
 							<div class="inner">
 								<header class="major">
-									<h1>Ottimizzazione DWH</h1>
+									<h1>Ottimizzazione del Data Warehouse</h1>
 								</header>
-								<p>In ambiente enterprise si implementerebbe:</p>
-								<ul>
-									<li><strong>Indici Columnstore</strong>: Per query analitiche su grandi volumi 
-										(Azure SQL Data Warehouse)</li>
-									<li><strong>Partizionamento</strong>: Per mese/anno su <code>fact_transactions</code> 
-										con filegroup multipli</li>
-									<li><strong>Materialized Views</strong>: Pre-aggregazioni per le dashboard 
-										(con refresh incrementale)</li>
-									<li><strong>Intelligent Query Processing</strong>: Adaptive joins e batch mode su 
-										Azure SQL Hyperscale</li>
-								</ul>
-								<p>Nella pratica, ottimizzerò lo schema con <strong>indici B-tree standard</strong> e 
-									<strong>viste materializzate manuali</strong> su PostgreSQL.</p>
+								<p>Il <strong>Data Warehouse</strong> di ARDEO S.H. - FTRS è progettato per garantire <strong>prestazioni elevate</strong> e <strong>integrazione fluida</strong> con i sistemi ETL, ML e Reporting. Ecco le strategie chiave implementate:</p>
 							</div>
 						</section>
+
+						<!-- Two -->
+						<section id="dwh-opt1">
+							<div class="inner">
+								<header class="major">
+									<h1>Strategie di Indicizzazione</h1>
+								</header>
+								<ul>
+									<li><strong>Indici columnstore</strong> per query analitiche su tabelle fattuali (<code>fact_transactions</code>)</li>
+									<li><strong>Indici ottimizzati</strong> sui campi temporali (<code>TransactionDate</code>) e chiavi di join</li>
+									<li><strong>Partizionamento</strong> mensile dei dati storici per ridurre i tempi di scansione</li>
+								</ul>
+							</div>
+						</section>
+
+						<!-- Three -->
+						<section id="dwh-opt2">
+							<div class="inner">
+								<header class="major">
+									<h1>Modello Star-Schema</h1>
+								</header>
+								<p>Struttura ottimizzata per analisi:</p>
+								<ul>
+									<li><strong>Tabelle fattuali</strong>: <code>fact_transactions</code> (400+ milioni di righe)</li>
+									<li><strong>Tabelle dimensionali</strong>: <code>dim_users</code>, <code>dim_products</code>, <code>dim_geography</code></li>
+									<li><strong>Viste materializzate</strong> per accelerare i report Power BI</li>
+								</ul>
+							</div>
+						</section>
+
+						<!-- Four -->
+						<section id="dwh-opt3">
+							<div class="inner">
+								<header class="major">
+									<h1>Performance Monitoring</h1>
+								</header>
+								<p>Strumenti implementati:</p>
+								<ul>
+									<li><strong>Query Store</strong> per tracciare le query più lente</li>
+									<li><strong>Alert automatici</strong> su utilizzo CPU/disco anomalo</li>
+									<li><strong>Ottimizzazione automatica</strong> degli indici tramite Azure SQL Advisor</li>
+								</ul>
+							</div>
+						</section>
+
+						<!-- Five -->
+						<section id="dwh-opt4">
+							<div class="inner">
+								<header class="major">
+									<h1>Integrazione con il Sistema ML</h1>
+								</header>
+								<p>Flusso dati ottimizzato:</p>
+								<ul>
+									<li><strong>Batch notturni</strong>: Aggiornamento tabelle alle 2:00 CET</li>
+									<li><strong>Viste dedicate</strong> (<code>v_ml_training_data</code>) per l'alimentazione del modello</li>
+									<li><strong>Trigger in tempo reale</strong> per transazioni ad alto rischio</li>
+								</ul>
+							</div>
+						</section>
+
+					</div>
 
 				<!-- Footer -->
 					<footer id="footer">

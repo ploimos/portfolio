@@ -49,21 +49,8 @@
 						</ul>
 					</nav>
 
-				<!-- Zero WIP -->
+				<!-- -->
 					<div id="main" class="alt">
-						<div class="inner" style="text-align: justify">
-							
-                            <header class="major" style="text-align: center;">
-                                <h1>WORK IN PROGRESS!</h1>
-                            </header>
-                            <span class="image main"><img src="../../images/pic11.jpg" alt="" /></span>
-                            <p>Questa pagina è ancora in fase di sviluppo. <br>
-                            Se dovessi avere qualche perplessità, non esitare a contattarci!</p>
-                            <ul class="actions">
-                                <li><a href="../../index.html#contact" class="button next">Contattaci</a></li>
-                            </ul>
-                            
-                        </div>
 
 						<!-- One -->
 						<section id="ml">
@@ -71,18 +58,60 @@
 								<header class="major">
 									<h1>Machine Learning</h1>
 								</header>
-								<p>L'approccio teorico prevederebbe:</p>
-								<ul>
-									<li><strong>Infrastruttura</strong>: Azure Machine Learning Service con compute cluster dedicato</li>
-									<li><strong>Algoritmi</strong>: Random Forest + XGBoost con ottimizzazione HyperDrive</li>
-									<li><strong>Feature Engineering</strong>: Creazione di variabili derivate (es. "transazioni ultime 24h") 
-										tramite Azure Databricks</li>
-									<li><strong>Deployment</strong>: API REST containerizzata su Azure Kubernetes Service (AKS)</li>
-								</ul>
-								<p>Nella pratica, svilupperò il modello usando <strong>scikit-learn</strong> in Python (Jupyter Notebook) 
-									e salverò i risultati come CSV per l'integrazione manuale nel DWH.</p>
+								<p>Il <strong>Machine Learning</strong> (ML) è una branca dell'<strong>Intelligenza Artificiale</strong> 
+									che permette ai sistemi di "imparare" dai dati senza essere esplicitamente programmati. 
+									Nel progetto ARDEO S.H. - FTRS, il ML analizza le transazioni per identificare potenziali 
+									frodi con precisione sempre maggiore.</p>
 							</div>
 						</section>
+
+						<!-- Two -->
+						<section id="ml1">
+							<div class="inner">
+								<header class="major">
+									<h1>Come Funziona nel Nostro Progetto</h1>
+								</header>
+								<p>Il nostro sistema utilizza un <strong>algoritmo di classificazione</strong> che esamina:</p>
+								<ul>
+									<li><strong>Importo della transazione</strong> (valori anomali)</li>
+									<li><strong>Ora e giorno</strong> (transazioni notturne più rischiose)</li>
+									<li><strong>Provenienza geografica</strong> (aree ad alto rischio)</li>
+									<li><strong>Tipo di carta</strong> (prepagate più monitorate)</li>
+								</ul>
+								<p>L'algoritmo confronta queste caratteristiche con migliaia di transazioni passate per calcolare un <strong>indice di rischio</strong>.</p>
+							</div>
+						</section>
+
+						<!-- Three -->
+						<section id="ml2">
+							<div class="inner">
+								<header class="major">
+									<h1>Casi di Studio Interessanti</h1>
+								</header>
+								<p>Il modello può identificare pattern complessi come:</p>
+								<ul>
+									<li><strong>Micro-transazioni esplorative</strong>: piccoli importi usati per testare carte rubate</li>
+									<li><strong>Geolocalizzazione incoerente</strong>: carte usate in paesi diversi in poche ore</li>
+									<li><strong>Riconoscimento di bot</strong>: sequenze di acquisti troppo rapide per essere umane</li>
+								</ul>
+							</div>
+						</section>
+
+						<!-- Four -->
+						<section id="ml3">
+							<div class="inner">
+								<header class="major">
+									<h1>Vantaggi per il Retail</h1>
+								</header>
+								<p>L'adozione del ML permette di:</p>
+								<ul>
+									<li>Ridurre <strong>falsi positivi</strong> nei blocchi transazionali</li>
+									<li>Adattarsi in tempo reale a <strong>nuove tipologie di frode</strong></li>
+									<li>Ottimizzare i <strong>costi di verifica manuale</strong></li>
+								</ul>
+							</div>
+						</section>
+					</div>
 
 				<!-- Footer -->
 					<footer id="footer">

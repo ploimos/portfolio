@@ -18,7 +18,7 @@ Priorità alta:
 - [x] ETL (99%)
 - [x] Dashboard Power BI (99%)
 - [x] Data Warehouse (85%)
-- [ ] Modello ML (40%)
+- [x] Modello ML (85%)
 - [ ] Reporting automatico (40%)
 - [ ] Ottimizzazione DWH (40%)
 
