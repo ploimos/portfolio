@@ -53,26 +53,26 @@ COUNTRY_ZONES = {
 
 # Dettaglio paesi con distribuzioni
 COUNTRIES_DATA = [
-    {'country': 'United States', 'population': 331_900_000, 'gdp_rank': 1, 'W': 0.42, 'C': 0.12, 'R': 0.28, 'H': 0.14, 'S': 0.04, 'zone': 'North America'},
-    {'country': 'China', 'population': 1_412_600_000, 'gdp_rank': 2, 'W': 0.38, 'C': 0.15, 'R': 0.30, 'H': 0.12, 'S': 0.05, 'zone': 'Asia Pacific'},
-    {'country': 'Japan', 'population': 125_700_000, 'gdp_rank': 3, 'W': 0.21, 'C': 0.19, 'R': 0.41, 'H': 0.11, 'S': 0.08, 'zone': 'Asia Pacific'},
-    {'country': 'Germany', 'population': 83_200_000, 'gdp_rank': 4, 'W': 0.23, 'C': 0.18, 'R': 0.40, 'H': 0.12, 'S': 0.07, 'zone': 'Europe West'},
-    {'country': 'India', 'population': 1_408_900_000, 'gdp_rank': 5, 'W': 0.11, 'C': 0.48, 'R': 0.12, 'H': 0.24, 'S': 0.05, 'zone': 'Asia Pacific'},
-    {'country': 'United Kingdom', 'population': 67_300_000, 'gdp_rank': 6, 'W': 0.35, 'C': 0.15, 'R': 0.25, 'H': 0.18, 'S': 0.07, 'zone': 'Europe West'},
-    {'country': 'France', 'population': 67_800_000, 'gdp_rank': 7, 'W': 0.32, 'C': 0.17, 'R': 0.28, 'H': 0.16, 'S': 0.07, 'zone': 'Europe West'},
-    {'country': 'Brazil', 'population': 213_500_000, 'gdp_rank': 8, 'W': 0.28, 'C': 0.25, 'R': 0.20, 'H': 0.20, 'S': 0.07, 'zone': 'Latin America'},
-    {'country': 'Italy', 'population': 59_100_000, 'gdp_rank': 9, 'W': 0.30, 'C': 0.20, 'R': 0.25, 'H': 0.17, 'S': 0.08, 'zone': 'Europe West'},
-    {'country': 'Canada', 'population': 38_000_000, 'gdp_rank': 10, 'W': 0.41, 'C': 0.11, 'R': 0.29, 'H': 0.14, 'S': 0.05, 'zone': 'North America'},
-    {'country': 'Russia', 'population': 143_400_000, 'gdp_rank': 11, 'W': 0.25, 'C': 0.30, 'R': 0.15, 'H': 0.22, 'S': 0.08, 'zone': 'Middle East'},
-    {'country': 'South Korea', 'population': 51_700_000, 'gdp_rank': 12, 'W': 0.33, 'C': 0.12, 'R': 0.35, 'H': 0.13, 'S': 0.07, 'zone': 'Asia Pacific'},
-    {'country': 'Australia', 'population': 25_700_000, 'gdp_rank': 13, 'W': 0.40, 'C': 0.10, 'R': 0.30, 'H': 0.15, 'S': 0.05, 'zone': 'Asia Pacific'},
-    {'country': 'Mexico', 'population': 128_900_000, 'gdp_rank': 14, 'W': 0.22, 'C': 0.35, 'R': 0.15, 'H': 0.20, 'S': 0.08, 'zone': 'Latin America'},
-    {'country': 'Indonesia', 'population': 275_500_000, 'gdp_rank': 15, 'W': 0.09, 'C': 0.52, 'R': 0.10, 'H': 0.23, 'S': 0.06, 'zone': 'Asia Pacific'},
-    {'country': 'Netherlands', 'population': 17_500_000, 'gdp_rank': 16, 'W': 0.36, 'C': 0.14, 'R': 0.26, 'H': 0.17, 'S': 0.07, 'zone': 'Europe West'},
-    {'country': 'Saudi Arabia', 'population': 35_000_000, 'gdp_rank': 17, 'W': 0.27, 'C': 0.28, 'R': 0.18, 'H': 0.19, 'S': 0.08, 'zone': 'Middle East'},
-    {'country': 'Turkey', 'population': 84_800_000, 'gdp_rank': 18, 'W': 0.20, 'C': 0.40, 'R': 0.15, 'H': 0.18, 'S': 0.07, 'zone': 'Middle East'},
-    {'country': 'Switzerland', 'population': 8_700_000, 'gdp_rank': 19, 'W': 0.19, 'C': 0.21, 'R': 0.39, 'H': 0.12, 'S': 0.09, 'zone': 'Europe West'},
-    {'country': 'Poland', 'population': 37_800_000, 'gdp_rank': 20, 'W': 0.26, 'C': 0.25, 'R': 0.20, 'H': 0.21, 'S': 0.08, 'zone': 'Middle East'}
+    {'country': 'United States', 'population': 331_900_000, 'gdp_rank': 1, 'W': 0.37, 'C': 0.11, 'R': 0.24, 'H': 0.13, 'S': 0.15, 'zone': 'North America'},
+    {'country': 'China', 'population': 1_412_600_000, 'gdp_rank': 2, 'W': 0.43, 'C': 0.09, 'R': 0.21, 'H': 0.11, 'S': 0.16, 'zone': 'Asia Pacific'},
+    {'country': 'Japan', 'population': 125_700_000, 'gdp_rank': 3, 'W': 0.19, 'C': 0.26, 'R': 0.34, 'H': 0.13, 'S': 0.08, 'zone': 'Asia Pacific'},
+    {'country': 'Germany', 'population': 83_200_000, 'gdp_rank': 4, 'W': 0.24, 'C': 0.16, 'R': 0.33, 'H': 0.14, 'S': 0.13, 'zone': 'Europe West'},
+    {'country': 'India', 'population': 1_408_900_000, 'gdp_rank': 5, 'W': 0.14, 'C': 0.41, 'R': 0.11, 'H': 0.19, 'S': 0.15, 'zone': 'Asia Pacific'},
+    {'country': 'United Kingdom', 'population': 67_300_000, 'gdp_rank': 6, 'W': 0.31, 'C': 0.13, 'R': 0.26, 'H': 0.14, 'S': 0.16, 'zone': 'Europe West'},
+    {'country': 'France', 'population': 67_800_000, 'gdp_rank': 7, 'W': 0.29, 'C': 0.16, 'R': 0.24, 'H': 0.16, 'S': 0.15, 'zone': 'Europe West'},
+    {'country': 'Brazil', 'population': 213_500_000, 'gdp_rank': 8, 'W': 0.23, 'C': 0.31, 'R': 0.16, 'H': 0.21, 'S': 0.09, 'zone': 'Latin America'},
+    {'country': 'Italy', 'population': 59_100_000, 'gdp_rank': 9, 'W': 0.26, 'C': 0.21, 'R': 0.29, 'H': 0.14, 'S': 0.10, 'zone': 'Europe West'},
+    {'country': 'Canada', 'population': 38_000_000, 'gdp_rank': 10, 'W': 0.39, 'C': 0.09, 'R': 0.31, 'H': 0.11, 'S': 0.10, 'zone': 'North America'},
+    {'country': 'Russia', 'population': 143_400_000, 'gdp_rank': 11, 'W': 0.21, 'C': 0.24, 'R': 0.19, 'H': 0.23, 'S': 0.13, 'zone': 'Middle East'},
+    {'country': 'South Korea', 'population': 51_700_000, 'gdp_rank': 12, 'W': 0.32, 'C': 0.11, 'R': 0.29, 'H': 0.14, 'S': 0.14, 'zone': 'Asia Pacific'},
+    {'country': 'Australia', 'population': 25_700_000, 'gdp_rank': 13, 'W': 0.37, 'C': 0.11, 'R': 0.29, 'H': 0.13, 'S': 0.10, 'zone': 'Asia Pacific'},
+    {'country': 'Mexico', 'population': 128_900_000, 'gdp_rank': 14, 'W': 0.19, 'C': 0.34, 'R': 0.16, 'H': 0.19, 'S': 0.12, 'zone': 'Latin America'},
+    {'country': 'Indonesia', 'population': 275_500_000, 'gdp_rank': 15, 'W': 0.11, 'C': 0.44, 'R': 0.12, 'H': 0.22, 'S': 0.11, 'zone': 'Asia Pacific'},
+    {'country': 'Netherlands', 'population': 17_500_000, 'gdp_rank': 16, 'W': 0.34, 'C': 0.13, 'R': 0.24, 'H': 0.16, 'S': 0.13, 'zone': 'Europe West'},
+    {'country': 'Saudi Arabia', 'population': 35_000_000, 'gdp_rank': 17, 'W': 0.26, 'C': 0.23, 'R': 0.19, 'H': 0.19, 'S': 0.13, 'zone': 'Middle East'},
+    {'country': 'Turkey', 'population': 84_800_000, 'gdp_rank': 18, 'W': 0.18, 'C': 0.36, 'R': 0.14, 'H': 0.19, 'S': 0.13, 'zone': 'Middle East'},
+    {'country': 'Switzerland', 'population': 8_700_000, 'gdp_rank': 19, 'W': 0.16, 'C': 0.19, 'R': 0.39, 'H': 0.11, 'S': 0.15, 'zone': 'Europe West'},
+    {'country': 'Poland', 'population': 37_800_000, 'gdp_rank': 20, 'W': 0.24, 'C': 0.26, 'R': 0.19, 'H': 0.19, 'S': 0.12, 'zone': 'Europe West'}
 ]
 
 # Provider email globali
