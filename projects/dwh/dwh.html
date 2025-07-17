@@ -176,8 +176,7 @@ INSERT INTO dim_email_provider (provider_name) VALUES
 
 							<!-- Operazione 7 -->
 							<p><strong><h3>7. Caricamento Dati da CSV</h3></strong></p>
-							<pre><code>\COPY temp_transactions FROM '/percorso/del/tuo/file.csv' 
-DELIMITER ',' CSV HEADER;</code></pre>
+							<pre><code>\COPY temp_transactions FROM '/percorso/del/tuo/file.csv' DELIMITER ',' CSV HEADER;</code></pre>
 							<p>Importazione dei dati dal file CSV nella tabella temporanea.</p>
 
 							<!-- Operazione 8 -->
@@ -1031,9 +1030,28 @@ LIMIT 5;</code></pre>
 							</div>
 						</section>
 
-						
 							</div>
 						</section>
+						<!-- Download project -->
+							<div id="main" class="alt">
+								<div class="inner" style="text-align: center">
+									<section id="custom-section">
+										<div style="text-align: center; margin: 0 auto; max-width: 800px;">
+											<!-- Testo -->
+											<p style="margin-bottom: 1.5em;">Puoi scaricare il codice SQL cliccando sul pulsante Download</p>
+											
+											<!-- Pulsante Centrato -->
+											<div style="display: flex; justify-content: center; align-items: center;">
+												<a href="download/frodi.sql" class="button icon solid fa-download" download 
+												style="display: inline-block; margin: 0 auto;">
+													Download
+												</a>
+											</div>
+										</div>
+									</section>
+								</div>
+							</div>
+						
 
 				<!-- Footer -->
 					<footer id="footer">
