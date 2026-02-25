@@ -1,6 +1,6 @@
 # 🛠️ Portfolio in Evoluzione  
 **di Marco Plomitallo**  
-*(Ultimo aggiornamento: 17-07-2025)*  
+*(Ultimo aggiornamento: 25-02-2026)*  
 
 [![Open in VSCode](https://img.shields.io/badge/🔧_Open_in_VSCode-007ACC?style=flat&logo=visualstudiocode)](vscode://github.remotehub/open?url=https://github.com/ploimos/portfolio)
 [![Open in Gitpod](https://img.shields.io/badge/⚡_Open_in_Gitpod-FFAE33?style=flat&logo=gitpod)](https://gitpod.io/#https://github.com/ploimos/portfolio)
@@ -21,6 +21,7 @@ Priorità alta:
 - [x] Modello ML (85%)
 - [x] Reporting automatico (85%)
 - [x] Ottimizzazione DWH (85%)
+- [ ] Project OMNIA (99%)
 
 Priorità media:
 - [x] Sezione About Me (99%)
